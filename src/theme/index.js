@@ -37,16 +37,25 @@ let theme = createTheme({
       fontSize: 32,
       lineHeight: 1.125,
     },
+    h4: {
+      fontFamily: '"Chillax-Variable", "Helvetica", "Arial", sans-serif',
+      fontWeight: 700,
+      fontSize: 24,
+      lineHeight: 4 / 3,
+    },
+    // p 24px
     body1: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
       fontSize: 24,
       lineHeight: 4 / 3,
     },
+    // p 20px
     body2: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
       fontSize: 20,
       lineHeight: 1.2,
     },
+    // label 20px
     subtitle1: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
       fontWeight: 500,
@@ -54,6 +63,7 @@ let theme = createTheme({
       lineHeight: 1.2,
       letterSpacing: '20%',
     },
+    // label 16px
     subtitle2: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
       fontWeight: 500,
@@ -61,9 +71,17 @@ let theme = createTheme({
       lineHeight: 1.25,
       letterSpacing: '16%',
     },
+    // label 14px
     caption: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
-      fontWeight: 500,
+      fontWeight: 700,
+      fontSize: 14,
+      lineHeight: 1.29,
+      letterSpacing: '8%',
+    },
+    button: {
+      fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
+      fontWeight: 700,
       fontSize: 14,
       lineHeight: 1.29,
       letterSpacing: '8%',
@@ -78,7 +96,16 @@ let theme = createTheme({
     },
     MuiButtonBase: {
       defaultProps: {
-        disableRipple: false,
+        disableRipple: true,
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 26,
+          padding: '16px 26px',
+          height: '44px',
+        },
       },
     },
     MuiTextFieldBase: {},

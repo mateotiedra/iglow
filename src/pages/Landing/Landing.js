@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Footer from '../../components/Footer/Footer';
 
 function Landing() {
@@ -15,6 +15,9 @@ function Landing() {
           mt: { xs: 20, sm: 20, md: 0 },
         }}
       >
+        <Typography variant='h1' align='center' color={'red'}>
+          Iglow
+        </Typography>
         <Footer />
       </Box>
     </>

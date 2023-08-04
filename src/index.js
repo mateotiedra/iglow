@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import theme from './theme';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import './fonts/Chillax-Extralight.ttf';
+import './fonts/Chillax-Light.ttf';
+import './fonts/Chillax-Regular.ttf';
+import './fonts/Chillax-Medium.ttf';
+import './fonts/Chillax-Semibold.ttf';
+import './fonts/Chillax-Bold.ttf';
+import './fonts/Chillax-Variable.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

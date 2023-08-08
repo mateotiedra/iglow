@@ -24,7 +24,7 @@ function Countdown() {
     fontSize: 'min(3vw, 20px)',
   };
 
-  const logosStyle = { height: { xs: '13px', sm: '20px' } };
+  const logosStyle = { height: { xs: '16px', sm: '20px' } };
 
   return (
     <Box
@@ -37,7 +37,10 @@ function Countdown() {
         maxWidth: '600px',
       }}
     >
-      <Typography variant='h2' textAlign='center' mb={'minutes(50px, 30vw)'}>
+      <Typography
+        variant='h2'
+        sx={{ textAlign: 'center', mb: 'minutes(50px,, 30vw)', mx: '10px' }}
+      >
         Get ready to grab your{' '}
         <Typography component='span' variant='h2' color='primary'>
           IGLOW® Smart Jacket
@@ -75,7 +78,7 @@ function Countdown() {
             sx={{
               position: 'relative',
               left: '0.2em',
-              width: '66px',
+              width: '5em',
             }}
           >
             Seconds
@@ -83,8 +86,17 @@ function Countdown() {
         </Box>
       </Box>
 
-      <Typography variant='body2' textAlign='center'>
-        Coming soon on &nbsp;
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'center', sm: 'baseline' },
+          gap: '8px',
+        }}
+      >
+        <Typography variant='body2' textAlign='center'>
+          Coming soon on
+        </Typography>
         <Typography variant='body2'>
           <Box
             component='img'
@@ -100,7 +112,7 @@ function Countdown() {
             sx={logosStyle}
           />
         </Typography>
-      </Typography>
+      </Box>
 
       <Box
         sx={{
@@ -113,6 +125,7 @@ function Countdown() {
         <TextField
           sx={{
             flexGrow: 1,
+            mx: '20px',
           }}
         >
           e-mail

@@ -5,6 +5,7 @@ import NavbarLogic from './NavbarLogic';
 import {
   AppBar,
   Button,
+  Container,
   IconButton,
   Link,
   List,
@@ -70,27 +71,51 @@ function Navbar({ admin, coverPage }) {
       <AppBar
         elevation={0}
         sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          px: '100px',
-          backgroundColor: 'background.default',
-          height: 92,
+          position: 'fixed',
+          background: 'rgba(0, 0, 0, 0.5)',
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+          backdropFilter: 'blur(20px)',
         }}
       >
-        <Box display='flex' flexDirection='row' alignItems='center' gap='16px'>
-          <img src={Iglow} alt='logo' style={{ height: '48px' }} />
-          <img src={SwissMade} alt='logo' style={{ height: '24px' }} />
-        </Box>
-        <Typography variant='subtitle2'>
-          Coming soon on &nbsp;
-          <img src={Indiegogo} alt='indiegogo' style={{ height: '12px' }} />
-          &nbsp; & &nbsp;
-          <img src={Kickstarter} alt='kickstarter' style={{ height: '12px' }} />
-        </Typography>
-        <Button variant='contained'>Join Us</Button>
-        {/* {!empty &&
+        <Container
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            px: '100px',
+            height: 92,
+            position: 'relative',
+          }}
+        >
+          <Box
+            display='flex'
+            flexDirection='row'
+            alignItems='center'
+            gap='16px'
+          >
+            <img src={Iglow} alt='logo' style={{ height: '48px' }} />
+            <img src={SwissMade} alt='logo' style={{ height: '24px' }} />
+          </Box>
+          <Typography
+            variant='subtitle2'
+            sx={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+            }}
+          >
+            Coming soon on &nbsp;
+            <img src={Indiegogo} alt='indiegogo' style={{ height: '12px' }} />
+            &nbsp; & &nbsp;
+            <img
+              src={Kickstarter}
+              alt='kickstarter'
+              style={{ height: '12px' }}
+            />
+          </Typography>
+          <Button variant='contained'>Join Us</Button>
+          {/* {!empty &&
           navLinksObj.map((linkObj) => {
             return (
               <Link
@@ -118,7 +143,7 @@ function Navbar({ admin, coverPage }) {
               </Link>
             );
           })} */}
-        {/* <IconButton
+          {/* <IconButton
           sx={{
             p: 2,
             display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'none' },
@@ -128,6 +153,7 @@ function Navbar({ admin, coverPage }) {
         >
           {drawerOpened ? <FiX size={25} /> : <FiMenu size={25} />}
         </IconButton> */}
+        </Container>
       </AppBar>
       {drawer}
     </>

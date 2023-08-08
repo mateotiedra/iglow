@@ -29,7 +29,11 @@ function Grabber() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        pt: '25vh',
+        pt: {
+          xs: '15vh',
+          sm: '25vh',
+        },
+        overflow: 'hidden',
       }}
     >
       <Box
@@ -37,14 +41,12 @@ function Grabber() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          height: '250px',
           textAlign: 'center',
           mb: '60px',
         }}
         maxWidth='770px'
       >
-        <Typography variant='h1'>
+        <Typography variant='h1' mb={{ xs: 3, sm: 10, md: 10 }}>
           Be seen{' '}
           <Typography component='span' variant='h1' color='primary'>
             stay safe
@@ -61,6 +63,7 @@ function Grabber() {
         style={{
           width: '70%',
           marginBottom: '60px',
+          minWidth: '500px',
         }}
       />
       <Countdown />

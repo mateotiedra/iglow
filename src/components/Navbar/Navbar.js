@@ -83,7 +83,7 @@ function Navbar({ admin, coverPage }) {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
-            px: '100px',
+            px: '10%',
             height: 92,
             position: 'relative',
           }}
@@ -94,8 +94,28 @@ function Navbar({ admin, coverPage }) {
             alignItems='center'
             gap='16px'
           >
-            <img src={Iglow} alt='logo' style={{ height: '48px' }} />
-            <img src={SwissMade} alt='logo' style={{ height: '24px' }} />
+            <Box
+              component='img'
+              src={Iglow}
+              alt='logo'
+              sx={{
+                height: {
+                  xs: '32px',
+                  sm: '48px',
+                },
+              }}
+            />
+            <Box
+              component='img'
+              src={SwissMade}
+              alt='logo'
+              sx={{
+                height: {
+                  xs: '16px',
+                  sm: '24px',
+                },
+              }}
+            />
           </Box>
           <Typography
             variant='subtitle2'
@@ -103,6 +123,11 @@ function Navbar({ admin, coverPage }) {
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%)',
+              display: {
+                xs: 'none',
+                sm: 'none',
+                md: 'inline',
+              },
             }}
           >
             Coming soon on &nbsp;

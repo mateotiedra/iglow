@@ -21,7 +21,7 @@ let theme = createTheme({
       fontFamily: '"Chillax-Variable", "Helvetica", "Arial", sans-serif',
       fontWeight: 600,
       fontSize: 60,
-      letterSpacing: '-6%',
+      letterSpacing: '-4%',
       lineHeight: 1.2,
     },
     h2: {
@@ -148,6 +148,10 @@ let theme = createTheme({
   },
 });
 
-theme = responsiveFontSizes(theme);
+theme.typography.h1[theme.breakpoints.down('sm')] = {
+  fontSize: 32,
+};
+
+//theme = responsiveFontSizes(theme);
 
 export default theme;

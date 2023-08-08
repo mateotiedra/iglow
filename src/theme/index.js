@@ -89,7 +89,7 @@ let theme = createTheme({
     countdown: {
       fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
       fontWeight: 700,
-      fontSize: 80,
+      fontSize: 'min(80px, 10vw)',
     },
   },
 
@@ -150,6 +150,14 @@ let theme = createTheme({
 
 theme.typography.h1[theme.breakpoints.down('sm')] = {
   fontSize: 32,
+};
+
+theme.typography.h2[theme.breakpoints.down('sm')] = {
+  fontSize: 24,
+};
+
+theme.typography.h3[theme.breakpoints.down('sm')] = {
+  fontSize: 20,
 };
 
 //theme = responsiveFontSizes(theme);

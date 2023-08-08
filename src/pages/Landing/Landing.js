@@ -30,7 +30,7 @@ function Grabber() {
         flexDirection: 'column',
         alignItems: 'center',
         pt: {
-          xs: '15vh',
+          xs: '20vh',
           sm: '25vh',
         },
         overflow: 'hidden',

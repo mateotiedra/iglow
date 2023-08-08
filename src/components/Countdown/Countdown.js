@@ -17,6 +17,15 @@ import CountdownLogic from './CountdownLogic';
 function Countdown() {
   const { days, hours, minutes, seconds } = CountdownLogic();
   const { STATE_GREY } = Palette();
+
+  const timerDescriptionProps = {
+    variant: 'body2',
+    color: STATE_GREY,
+    fontSize: 'min(3vw, 20px)',
+  };
+
+  const logosStyle = { height: { xs: '13px', sm: '20px' } };
+
   return (
     <Box
       sx={{
@@ -28,7 +37,7 @@ function Countdown() {
         maxWidth: '600px',
       }}
     >
-      <Typography variant='h2' textAlign='center' mb='50px'>
+      <Typography variant='h2' textAlign='center' mb={'minutes(50px, 30vw)'}>
         Get ready to grab your{' '}
         <Typography component='span' variant='h2' color='primary'>
           IGLOW® Smart Jacket
@@ -39,48 +48,34 @@ function Countdown() {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'start',
-          width: '500px',
+          maxWidth: '500px',
           gap: '10px',
           mb: '20px',
         }}
       >
         <Box display='flex' flexDirection='column' alignItems='center'>
-          <Typography variant='countdown' sx={{}}>
-            {days}
-          </Typography>
-          <Typography variant='body2' color={STATE_GREY}>
-            Days
-          </Typography>
+          <Typography variant='countdown'>{days}</Typography>
+          <Typography {...timerDescriptionProps}>Days</Typography>
         </Box>
         <Typography variant='countdown'>:</Typography>
         <Box display='flex' flexDirection='column' alignItems='center'>
-          <Typography variant='countdown' sx={{}}>
-            {hours}
-          </Typography>
-          <Typography variant='body2' color={STATE_GREY}>
-            Hours
-          </Typography>
+          <Typography variant='countdown'>{hours}</Typography>
+          <Typography {...timerDescriptionProps}>Hours</Typography>
         </Box>
         <Typography variant='countdown'>:</Typography>
         <Box display='flex' flexDirection='column' alignItems='center'>
-          <Typography variant='countdown' sx={{}}>
-            {minutes}
-          </Typography>
-          <Typography variant='body2' color={STATE_GREY}>
-            Minutes
-          </Typography>
+          <Typography variant='countdown'>{minutes}</Typography>
+          <Typography {...timerDescriptionProps}>Minutes</Typography>
         </Box>
         <Typography variant='countdown'>:</Typography>
         <Box display='flex' flexDirection='column' alignItems='start'>
-          <Typography variant='countdown' sx={{}}>
-            {seconds}
-          </Typography>
+          <Typography variant='countdown'>{seconds}</Typography>
           <Typography
-            variant='body2'
-            color={STATE_GREY}
+            {...timerDescriptionProps}
             sx={{
               position: 'relative',
-              left: '10px',
+              left: '0.2em',
+              width: '66px',
             }}
           >
             Seconds
@@ -88,30 +83,47 @@ function Countdown() {
         </Box>
       </Box>
 
-      <Typography variant='body2'>
+      <Typography variant='body2' textAlign='center'>
         Coming soon on &nbsp;
-        <img src={indiegogo} alt='indiegogo' style={{ height: '20px' }} />
-        &nbsp; & &nbsp;
-        <img src={kickstarter} alt='kickstarter' style={{ height: '20px' }} />
+        <Typography variant='body2'>
+          <Box
+            component='img'
+            src={indiegogo}
+            alt='indiegogo'
+            sx={logosStyle}
+          />
+          &nbsp; & &nbsp;
+          <Box
+            component='img'
+            src={kickstarter}
+            alt='kickstarter'
+            sx={logosStyle}
+          />
+        </Typography>
       </Typography>
 
-      <Box>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          gap: '20px',
+          alignItems: 'center',
+        }}
+      >
         <TextField
           sx={{
             flexGrow: 1,
-            mr: '20px',
           }}
         >
           e-mail
         </TextField>
-
         <Button variant='contained' startIcon={<PiBellBold />}>
           Get an alert
         </Button>
       </Box>
-      <Typography variant='body2' color={STATE_GREY}>
+      <Typography {...timerDescriptionProps}>
         <Checkbox />I have read and I accept{' '}
-        <Typography color='primary' component='a' variant='body2'>
+        <Typography component='a' {...timerDescriptionProps} color='primary'>
           the privacy policy
         </Typography>
       </Typography>

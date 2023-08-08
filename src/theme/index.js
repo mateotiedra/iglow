@@ -21,7 +21,7 @@ let theme = createTheme({
       fontFamily: '"Chillax-Variable", "Helvetica", "Arial", sans-serif',
       fontWeight: 600,
       fontSize: 60,
-      letterSpacing: '-4%',
+      letterSpacing: '-6%',
       lineHeight: 1.2,
     },
     h2: {
@@ -86,6 +86,11 @@ let theme = createTheme({
       lineHeight: 1.29,
       letterSpacing: '8%',
     },
+    countdown: {
+      fontFamily: '"Outfit", "Helvetica", "Arial", sans-serif',
+      fontWeight: 700,
+      fontSize: 80,
+    },
   },
 
   components: {
@@ -108,7 +113,25 @@ let theme = createTheme({
         },
       },
     },
-    MuiTextFieldBase: {},
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          borderRadius: 26,
+          backgroundColor: 'white',
+          outline: 'none',
+          height: '44px',
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 25,
+          color: 'black',
+          height: '46px',
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {

@@ -1,6 +1,13 @@
 import Palette from '../../theme/palette.js';
 
-import { Box, Button, IconButton, TextField, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Checkbox,
+  IconButton,
+  TextField,
+  Typography,
+} from '@mui/material';
 import indiegogo from '../../assets/logos/indiegogo-color.svg';
 import kickstarter from '../../assets/logos/kickstarter-color.svg';
 import { PiBellBold } from 'react-icons/pi';
@@ -102,6 +109,12 @@ function Countdown() {
           Get an alert
         </Button>
       </Box>
+      <Typography variant='body2' color={STATE_GREY}>
+        <Checkbox />I have read and I accept{' '}
+        <Typography color='primary' component='a' variant='body2'>
+          the privacy policy
+        </Typography>
+      </Typography>
     </Box>
   );
 }

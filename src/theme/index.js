@@ -1,14 +1,17 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import Palette from './palette';
+
+const palette = Palette();
 
 // Manage the website theme
 let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#DC0028',
+      main: palette.RED,
     },
     background: {
-      default: '#08080C',
+      default: palette.BLACK,
     },
     text: {
       primary: '#FFFFFF',

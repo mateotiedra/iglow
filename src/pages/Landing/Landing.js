@@ -1,26 +1,34 @@
-import Palette from '../../theme/palette';
-
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
+import Palette from '../../theme/palette';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Countdown from '../../components/Countdown/Countdown';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
+import IllustratedParagraph from '../../components/IllustratedParagraph/IllustratedParagraph';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 import noisyFilter from '../../assets/images/noisy-filter.png';
 import jacketRedBack from '../../assets/images/jacket-red-back.png';
-import subtractShape from '../../assets/images/subtract.png';
 import trailer from '../../assets/videos/trailer.mp4';
+import subtractShape from '../../assets/images/subtract.png';
+import smartJacket from '../../assets/images/smart-jacket.png';
+import controller from '../../assets/images/controller.png';
+import mountain from '../../assets/images/mountain.png';
+import redBanner from '../../assets/images/red-banner.svg';
+import blackBanner from '../../assets/images/black-banner.svg';
+import SpecsSection from '../../components/SpecsSection/SpecsSection';
 
 function Landing() {
   return (
     <Box>
       <Navbar />
-      <Grabber />
+      <HeroSection />
+      <WhatIsSection />
     </Box>
   );
 }
 
-function Grabber() {
+function HeroSection() {
   const { STATE_GREY } = Palette();
   return (
     <Box
@@ -29,7 +37,6 @@ function Grabber() {
         width: '100%',
       }}
     >
-      $
       <Box sx={{ backgroundImage: `url(${noisyFilter})`, width: '100%' }}>
         <Container
           sx={{
@@ -100,6 +107,71 @@ function Grabber() {
           width: '100%',
           zIndex: '1',
         }}
+      />
+    </Box>
+  );
+}
+
+function WhatIsSection() {
+  const { NIGHT } = Palette();
+  return (
+    <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
+      <Container>
+        <EmptySpace />
+        <SectionTitle
+          overtitle='WHAT IS IGLOW ?'
+          title='Ride bright'
+          highlight='stay in sight'
+        />
+        <EmptySpace under='h2' />
+        <IllustratedParagraph
+          overtitle='safety'
+          title='High Visibility Smart Jacket'
+          text='Featuring state-of-the-art LED indicators, the vest offers improved visibility, particularly in low-light conditions. Its streamlined and ergonomic design guarantees both comfort and user-friendliness, even when you carry a backpack.'
+          imgSrc={smartJacket}
+        />
+        <EmptySpace />
+        <IllustratedParagraph
+          reverse
+          overtitle='Flexibility'
+          title='Ergonomic Remote Control'
+          text='To control the turn signals, the Smart Jacket is equipped with a remote control that enables users to effortlessly activate them with a simple thumb press, without needing to glance at their fingers and while staying focused on the road.'
+          imgSrc={controller}
+        />
+        <EmptySpace />
+      </Container>
+      <Box
+        component='img'
+        src={blackBanner}
+        sx={{ width: '101%', display: { xs: 'none', sm: 'inline' } }}
+      />
+      <Container>
+        <EmptySpace />
+        <SectionTitle
+          overtitle='For the nerds'
+          title='Exploring the'
+          highlight='specs'
+        />
+        <EmptySpace under='h2' />
+        <SpecsSection />
+        <EmptySpace />
+        <SectionTitle
+          overtitle='Engineered in Switzerland'
+          highlight='Swiss quality'
+          title='unmatched safety'
+          reverse
+        />
+      </Container>
+      <Box component='img' src={mountain} width='101%' />
+      <Box
+        component='img'
+        src={blackBanner}
+        sx={{ width: '101%', position: 'relative', top: 175 }}
+      />
+      <Box
+        component='img'
+        src={redBanner}
+        sx={{ width: '101%', position: 'relative', top: 100 }}
       />
     </Box>
   );

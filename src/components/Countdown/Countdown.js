@@ -37,14 +37,16 @@ function Countdown() {
         maxWidth: '600px',
       }}
     >
-      <Typography
-        variant='h2'
-        sx={{ textAlign: 'center', mb: 'minutes(50px,, 30vw)', mx: '10px' }}
-      >
-        Get ready to grab your{' '}
+      <Typography textAlign='center'>
+        <Typography
+          variant='h2'
+          sx={{ textAlign: 'center', mb: 'minutes(50px,, 30vw)' }}
+        >
+          Get ready to grab your{' '}
+        </Typography>
         <Typography component='span' variant='h2' color='primary'>
           IGLOW® Smart Jacket
-        </Typography>{' '}
+        </Typography>
       </Typography>
       <Box
         sx={{

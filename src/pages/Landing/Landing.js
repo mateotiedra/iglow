@@ -19,6 +19,8 @@ import SpecsSection from '../../components/SpecsSection/SpecsSection';
 import Banner from '../../components/Banner/Banner';
 import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
 import IdCard from '../../components/IdCard/IdCard';
+import FAQSection from '../../components/FAQSection/FAQSection';
+import FormContact from '../../components/FormContact/FormContact';
 
 function Landing() {
   return (
@@ -27,6 +29,7 @@ function Landing() {
       <HeroSection />
       <WhatIsSection />
       <SocialSection />
+      <ContactSection />
     </Box>
   );
 }
@@ -75,23 +78,42 @@ function HeroSection() {
               choice that enhances road safety like never before.
             </Typography>
           </Box>
-          <img
-            src={jacketRedBack}
-            style={{
-              width: '70%',
-              marginBottom: '60px',
+          <Box
+            sx={{
+              width: '100vw',
+              overflow: 'hidden',
+              position: 'relative',
               minWidth: '500px',
+              maxWidth: '800px',
+              marginBottom: '60px',
             }}
-          />
+          >
+            <img
+              src={jacketRedBack}
+              style={{
+                width: '110%',
+                marginBottom: '60px',
+
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+              }}
+            />
+            <img
+              src={jacketRedBack}
+              style={{
+                width: '110%',
+                opacity: 0,
+              }}
+            />
+          </Box>
           <Countdown />
           <EmptySpace />
-          <Typography textAlign='center'>
-            <Typography variant='h2' sx={{ textAlign: 'center' }}>
-              Lights, Cameras, Action !
-            </Typography>
-            <Typography variant='h2' color='primary'>
-              Unveiling the IGLOW® Smart Jacket
-            </Typography>
+          <Typography variant='h2' sx={{ textAlign: 'center' }}>
+            Lights, Cameras, Action !
+          </Typography>
+          <Typography variant='h2' color='primary'>
+            Unveiling the IGLOW® Smart Jacket
           </Typography>
           <EmptySpace under='h2' />
           <video
@@ -239,6 +261,64 @@ function SocialSection() {
         <EmptySpace under='h2' /> */}
       </Container>
     </NoisyContainer>
+  );
+}
+
+function ContactSection() {
+  const { NIGHT, STATE_GREY } = Palette();
+  return (
+    <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
+      <Container>
+        <EmptySpace />
+        <SectionTitle
+          overtitle='F. A. Q.'
+          title='Let us'
+          highlight='enlighten you !'
+        />
+        <EmptySpace under='h2' />
+        <FAQSection />
+        <EmptySpace />
+        <SectionTitle
+          overtitle='Contact'
+          title='Need help ?'
+          highlight='We are here for you !'
+        />
+        <EmptySpace under='h2' />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWtap: 'wrap',
+            gap: 20,
+          }}
+        >
+          <Box width='40%'>
+            <Typography color={STATE_GREY} variant='body1'>
+              Have a question or interested in a partnership? We'd love to hear
+              from you ! Contact our team by filling out the form below, and
+              we'll get back to you as soon as possible !
+            </Typography>
+            <EmptySpace height={20} />
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+              }}
+            >
+              <Typography variant='h3'>IGLOW® Switzerland</Typography>
+              <Typography variant='body1'>
+                Pl. de la Palud 2, 1003 Lausanne, Switzerland
+              </Typography>
+              <Typography component='a' href='tel:+41799068852' color={NIGHT}>
+                +41 79 906 88 52
+              </Typography>
+            </Box>
+          </Box>
+          <FormContact />
+        </Box>
+      </Container>
+    </Box>
   );
 }
 

@@ -24,6 +24,7 @@ function FAQSection() {
             sx={{
               backgroundColor: 'transparent',
             }}
+            key={id}
             elevation={0}
             expanded={selected}
             onChange={handleAccordionChange(id)}

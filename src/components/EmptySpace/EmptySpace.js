@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 
 function EmptySpace({ under, height }) {
-  console.log(under);
   return (
     <Box
       sx={{

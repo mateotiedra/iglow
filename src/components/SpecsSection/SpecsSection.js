@@ -43,6 +43,7 @@ function SpecsSection() {
               elevation={0}
               expanded={selected}
               onChange={handleAccordionChange(id)}
+              key={id}
             >
               <AccordionSummary
                 expandIcon={

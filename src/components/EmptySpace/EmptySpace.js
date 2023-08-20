@@ -11,6 +11,8 @@ function EmptySpace({ under, height }) {
           ? { xs: 24, sm: 68 }
           : under === 'h2'
           ? { xs: 24, sm: 68 }
+          : under === 'h4'
+          ? { xs: 2, sm: 4 }
           : { xs: 80, sm: 140 },
       }}
     />

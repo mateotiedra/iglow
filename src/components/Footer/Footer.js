@@ -1,70 +1,88 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import {
+  Avatar,
+  Box,
+  Button,
+  Container,
+  Divider,
+  TextField,
+  Typography,
+} from '@mui/material';
 
-/* import { HiMail } from 'react-icons/hi';
-import { GrInstagram } from 'react-icons/gr'; */
+import Palette from '../../theme/palette';
+import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-function Footer({ push }) {
+import NoisyContainer from '../NoisyContainer/NoisyContainer';
+import Banner from '../Banner/Banner';
+import SectionTitle from '../SectionTitle/SectionTitle';
+import EmptySpace from '../EmptySpace/EmptySpace';
+import HaveReadCheckbox from '../HaveReadCheckbox/HaveReadCheckbox';
+import NewsletterSub from '../NewsletterSub/NewsletterSub';
+
+function Footer() {
+  const { STATE_GREY, NIGHT } = Palette();
+
   return (
-    <>
-      <Box
-        component='footer'
-        sx={{
-          py: 6,
-          px: 2,
-          mt: push ? 'auto' : 0,
-        }}
+    <NoisyContainer>
+      <Banner variant='black' top='min(-6vw, -120px)' />
+      <Container
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
-        <Container
-          maxWidth='sm'
+        <SectionTitle title='Get an alert when' highlight='we lauch' />
+        <EmptySpace under='h2' />
+        <NewsletterSub />
+        <Divider sx={{ width: '100%', mt: 5 }} />
+        <Box
           sx={{
+            width: '100%',
             display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'column',
-            gap: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            mt: 3,
+            mb: 10,
           }}
         >
           <Box
+            color={STATE_GREY}
             sx={{
               display: 'flex',
               flexDirection: 'row',
-              gap: 2,
+              gap: 5,
             }}
           >
-            <Box
-              component='a'
-              href='mailto:contact@okalo.ch'
-              display='flex'
-              alignItems='center'
-              color='text.secondary'
-              sx={{ textDecoration: 'none' }}
-            >
-              <Typography variant='body2' color='text.secondary' ml={0.5}>
-                Contact
-              </Typography>
-            </Box>
-            <Box
-              component='a'
-              href='https://www.instagram.com/okalo.ch/'
-              display='flex'
-              alignItems='center'
-              color='text.secondary'
-              sx={{ textDecoration: 'none' }}
-            >
-              <Typography variant='body2' color='text.secondary' ml={0.5}>
-                Instagram
-              </Typography>
-            </Box>
+            <Typography variant='subtitle2'>©IGLOW® 2023</Typography>
+            <Typography variant='subtitle2'>Legal Notice</Typography>
+            <Typography variant='subtitle2'>Privacy Policy</Typography>
           </Box>
-          <Typography variant='body2' color='text.secondary'>
-            {'Copyright © Mateo Tiedra '}
-            {new Date().getFullYear()}
-            {'.'}
-          </Typography>
-        </Container>
-      </Box>
-      <Box sx={{ height: 90, display: { md: 'none' } }} />
-    </>
+          <Box
+            color={STATE_GREY}
+            sx={{ display: 'flex', flexDirection: 'row', gap: 5 }}
+          >
+            <Avatar sx={{ backgroundColor: NIGHT }}>
+              <FaInstagram
+                component='a'
+                href='https://www.instagram.com/okalo.ch'
+                color='white'
+              />
+            </Avatar>
+            <Avatar sx={{ backgroundColor: NIGHT }}>
+              <FaTiktok
+                component='a'
+                href='https://www.tiktok.com/'
+                color='white'
+              />
+            </Avatar>
+            <Avatar sx={{ backgroundColor: NIGHT }}>
+              <FaYoutube
+                component='a'
+                href='https://www.youtube.com/'
+                color='white'
+              />
+            </Avatar>
+          </Box>
+        </Box>
+      </Container>
+    </NoisyContainer>
   );
 }
 

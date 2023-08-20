@@ -13,6 +13,8 @@ import kickstarter from '../../assets/logos/kickstarter-color.svg';
 import { PiBellBold } from 'react-icons/pi';
 
 import CountdownLogic from './CountdownLogic';
+import HaveReadCheckbox from '../HaveReadCheckbox/HaveReadCheckbox.js';
+import NewsletterSub from '../NewsletterSub/NewsletterSub.js';
 
 function Countdown() {
   const { days, hours, minutes, seconds } = CountdownLogic();
@@ -115,33 +117,7 @@ function Countdown() {
           />
         </Typography>
       </Box>
-
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          gap: '20px',
-          alignItems: 'center',
-        }}
-      >
-        <TextField
-          sx={{
-            flexGrow: 1,
-            mx: '20px',
-          }}
-        >
-          e-mail
-        </TextField>
-        <Button variant='contained' startIcon={<PiBellBold />}>
-          Get an alert
-        </Button>
-      </Box>
-      <Typography {...timerDescriptionProps}>
-        <Checkbox />I have read and I accept{' '}
-        <Typography component='a' {...timerDescriptionProps} color='primary'>
-          the privacy policy
-        </Typography>
-      </Typography>
+      <NewsletterSub />
     </Box>
   );
 }

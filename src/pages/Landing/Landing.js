@@ -21,16 +21,18 @@ import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
 import IdCard from '../../components/IdCard/IdCard';
 import FAQSection from '../../components/FAQSection/FAQSection';
 import FormContact from '../../components/FormContact/FormContact';
+import Footer from '../../components/Footer/Footer';
 
 function Landing() {
   return (
-    <Box>
+    <>
       <Navbar />
       <HeroSection />
       <WhatIsSection />
       <SocialSection />
       <ContactSection />
-    </Box>
+      <Footer />
+    </>
   );
 }
 
@@ -292,6 +294,8 @@ function ContactSection() {
             gap: 20,
           }}
         >
+          <FormContact />
+
           <Box width='40%'>
             <Typography color={STATE_GREY} variant='body1'>
               Have a question or interested in a partnership? We'd love to hear
@@ -315,9 +319,9 @@ function ContactSection() {
               </Typography>
             </Box>
           </Box>
-          <FormContact />
         </Box>
       </Container>
+      <EmptySpace />
     </Box>
   );
 }

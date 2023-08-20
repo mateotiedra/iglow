@@ -6,15 +6,17 @@ function SectionTitle({ overtitle, reverse, highlight, title }) {
   const { STATE_GREY } = Palette();
   return (
     <>
-      <Typography
-        variant='subtitle1'
-        textAlign='center'
-        textTransform='uppercase'
-        mb={2}
-        color={STATE_GREY}
-      >
-        {overtitle}
-      </Typography>
+      {overtitle && (
+        <Typography
+          variant='subtitle1'
+          textAlign='center'
+          textTransform='uppercase'
+          mb={2}
+          color={STATE_GREY}
+        >
+          {overtitle}
+        </Typography>
+      )}
       <Typography variant='h2' textAlign='center'>
         {reverse ? (
           <>

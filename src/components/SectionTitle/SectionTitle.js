@@ -9,7 +9,7 @@ function SectionTitle({ overtitle, reverse, highlight, title }) {
       <Typography
         variant='subtitle1'
         textAlign='center'
-        transform='uppercase'
+        textTransform='uppercase'
         mb={2}
         color={STATE_GREY}
       >

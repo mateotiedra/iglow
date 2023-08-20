@@ -10,7 +10,17 @@ function Banner({ variant = 'both', top }) {
     left: -1,
   };
   return (
-    <Box sx={{ my: 0, py: 0, position: 'relative', top: top, zIndex: 3 }}>
+    <Box
+      sx={{
+        my: 0,
+        py: 0,
+        position: 'relative',
+        top: top,
+        zIndex: 3,
+        width: '100vw',
+        overflow: 'hidden',
+      }}
+    >
       {(variant == 'black' || variant == 'both') && (
         <Box
           component='img'

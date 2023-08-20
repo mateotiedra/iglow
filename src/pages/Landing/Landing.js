@@ -1,5 +1,14 @@
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import Palette from '../../theme/palette';
+
+import jacketRedBack from '../../assets/images/jacket-red-back.png';
+import trailer from '../../assets/videos/trailer.mp4';
+import subtractShape from '../../assets/images/subtract.png';
+import smartJacket from '../../assets/images/smart-jacket.png';
+import controller from '../../assets/images/controller.png';
+import mountain from '../../assets/images/mountain.png';
+import { PiQuotesFill } from 'react-icons/pi';
+
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Countdown from '../../components/Countdown/Countdown';
@@ -9,13 +18,7 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import SpecsSection from '../../components/SpecsSection/SpecsSection';
 import Banner from '../../components/Banner/Banner';
 import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
-
-import jacketRedBack from '../../assets/images/jacket-red-back.png';
-import trailer from '../../assets/videos/trailer.mp4';
-import subtractShape from '../../assets/images/subtract.png';
-import smartJacket from '../../assets/images/smart-jacket.png';
-import controller from '../../assets/images/controller.png';
-import mountain from '../../assets/images/mountain.png';
+import IdCard from '../../components/IdCard/IdCard';
 
 function Landing() {
   return (
@@ -113,7 +116,7 @@ function HeroSection() {
 }
 
 function WhatIsSection() {
-  const { NIGHT } = Palette();
+  const { NIGHT, STATE_GREY } = Palette();
   return (
     <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
       <Container>
@@ -157,13 +160,86 @@ function WhatIsSection() {
           title='unmatched safety'
           reverse
         />
+        <EmptySpace under='h2' />
+        <Typography color={STATE_GREY} textAlign='center'>
+          The Smart Jacket is the culmination of over 3 years of Swiss research
+          and engineering. We are dedicated to offering our customers
+          unparalleled quality and adherence to safety standards. All electronic
+          components and intelligent technical fabrics are entirely developed by
+          Swiss companies, further solidifying our commitment to Swiss
+          craftsmanship and innovation.
+        </Typography>
       </Container>
       <Box component='img' src={mountain} width='101%' />
-      <Banner />
+      <EmptySpace />
     </Box>
   );
 }
 
-function SocialSection() {}
+function SocialSection() {
+  const { STATE_GREY, RED } = Palette();
+  return (
+    <NoisyContainer>
+      <Banner top='min(-17vw, -120px)' />
+      <Container
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      >
+        <SectionTitle
+          overtitle='They talk about us'
+          title='IGLOW® also'
+          highlight='shine in the press'
+        />
+        <EmptySpace under='h2' />
+        <PiQuotesFill color={RED} size={70} style={{ marginBottom: '20px' }} />
+        <Typography color={STATE_GREY} textAlign='center'>
+          IGLOW® captures the interest of the cycling community with the launch
+          of its Smart Jacket, a high-visibility vest made in Switzerland and
+          designed to improve road safety. An ambitious global crowdfunding
+          campaign is currently underway on Kickstarter and Indiegogo. With a
+          dual focus on safety and style, the Smart Jacket IGLOW emerges as a
+          pioneering extension of the cycling gear market, inviting cyclists to
+          protect themselves against the daily perils of the road.
+        </Typography>
+        <EmptySpace />
+        <SectionTitle
+          overtitle='About us'
+          title='Discover the'
+          highlight='team behind IGLOW®'
+        />
+        <EmptySpace under='h2' />
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 'min(10vw, 80px)',
+            justifyContent: 'center',
+          }}
+        >
+          <IdCard src='fabrice.png' name='Fabrice' role='Co-founder' />
+          <IdCard src='lucas.png' name='Lucas' role='Co-founder' />
+          <IdCard src='alena.png' name='Alena' role='Sweing queen' />
+          <IdCard src='mateo.png' name='Mateo' role='Developer' />
+          <IdCard
+            src='jean-baptiste.png'
+            name='Jean-Baptiste'
+            role='Videographer'
+          />
+          <IdCard
+            src='maxime.png'
+            name='Maxime'
+            role='Visual identity manager'
+          />
+        </Box>
+        <EmptySpace />
+        {/* <SectionTitle
+          overtitle='Stay tuned'
+          title='Join the'
+          highlight='community'
+        />
+        <EmptySpace under='h2' /> */}
+      </Container>
+    </NoisyContainer>
+  );
+}
 
 export default Landing;

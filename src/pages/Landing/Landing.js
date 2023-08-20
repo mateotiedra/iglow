@@ -6,17 +6,16 @@ import Countdown from '../../components/Countdown/Countdown';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
 import IllustratedParagraph from '../../components/IllustratedParagraph/IllustratedParagraph';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import SpecsSection from '../../components/SpecsSection/SpecsSection';
+import Banner from '../../components/Banner/Banner';
+import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
 
-import noisyFilter from '../../assets/images/noisy-filter.png';
 import jacketRedBack from '../../assets/images/jacket-red-back.png';
 import trailer from '../../assets/videos/trailer.mp4';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
 import controller from '../../assets/images/controller.png';
 import mountain from '../../assets/images/mountain.png';
-import redBanner from '../../assets/images/red-banner.svg';
-import blackBanner from '../../assets/images/black-banner.svg';
-import SpecsSection from '../../components/SpecsSection/SpecsSection';
 
 function Landing() {
   return (
@@ -24,6 +23,7 @@ function Landing() {
       <Navbar />
       <HeroSection />
       <WhatIsSection />
+      <SocialSection />
     </Box>
   );
 }
@@ -37,7 +37,7 @@ function HeroSection() {
         width: '100%',
       }}
     >
-      <Box sx={{ backgroundImage: `url(${noisyFilter})`, width: '100%' }}>
+      <NoisyContainer>
         <Container
           sx={{
             display: 'flex',
@@ -98,7 +98,7 @@ function HeroSection() {
             <source src={trailer} />
           </video>
         </Container>
-      </Box>
+      </NoisyContainer>
       <img
         src={subtractShape}
         style={{
@@ -140,11 +140,7 @@ function WhatIsSection() {
         />
         <EmptySpace />
       </Container>
-      <Box
-        component='img'
-        src={blackBanner}
-        sx={{ width: '101%', display: { xs: 'none', sm: 'inline' } }}
-      />
+      <Banner variant='black' />
       <Container>
         <EmptySpace />
         <SectionTitle
@@ -163,18 +159,11 @@ function WhatIsSection() {
         />
       </Container>
       <Box component='img' src={mountain} width='101%' />
-      <Box
-        component='img'
-        src={blackBanner}
-        sx={{ width: '101%', position: 'relative', top: 175 }}
-      />
-      <Box
-        component='img'
-        src={redBanner}
-        sx={{ width: '101%', position: 'relative', top: 100 }}
-      />
+      <Banner />
     </Box>
   );
 }
+
+function SocialSection() {}
 
 export default Landing;

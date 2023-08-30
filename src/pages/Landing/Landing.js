@@ -302,7 +302,7 @@ function ContactSection() {
               from you ! Contact our team by filling out the form below, and
               we'll get back to you as soon as possible !
             </Typography>
-            <EmptySpace height={20} />
+            <EmptySpace height={40} />
             <Box
               sx={{
                 display: 'flex',
@@ -316,6 +316,13 @@ function ContactSection() {
               </Typography>
               <Typography component='a' href='tel:+41799068852' color={NIGHT}>
                 +41 79 906 88 52
+              </Typography>
+              <Typography
+                component='a'
+                href='mailto:contact@iglow.bike'
+                color={NIGHT}
+              >
+                contact@iglow.bike
               </Typography>
             </Box>
           </Box>

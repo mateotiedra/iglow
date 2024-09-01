@@ -53,7 +53,7 @@ function HeroSection() {
             alignItems: 'center',
             pt: {
               xs: '20vh',
-              sm: '25vh',
+              sm: '22vh',
             },
           }}
         >
@@ -63,7 +63,6 @@ function HeroSection() {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
-              mb: '60px',
             }}
             maxWidth='770px'
           >
@@ -83,11 +82,10 @@ function HeroSection() {
           <Box
             sx={{
               width: '100vw',
-              overflow: 'hidden',
               position: 'relative',
               minWidth: '500px',
-              maxWidth: '800px',
-              marginBottom: '60px',
+              maxWidth: '700px',
+              px: '8%',
             }}
           >
             <img
@@ -95,11 +93,12 @@ function HeroSection() {
               style={{
                 width: '110%',
                 marginBottom: '60px',
-
                 position: 'absolute',
                 left: '50%',
-                transform: 'translateX(-50%)',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
               }}
+              alt='jacket'
             />
             <img
               src={jacketRedBack}
@@ -107,6 +106,7 @@ function HeroSection() {
                 width: '110%',
                 opacity: 0,
               }}
+              alt='jacket'
             />
           </Box>
           <Countdown />
@@ -134,6 +134,7 @@ function HeroSection() {
           width: '100%',
           zIndex: '1',
         }}
+        alt='substract shape'
       />
     </Box>
   );

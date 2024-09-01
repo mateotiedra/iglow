@@ -28,7 +28,7 @@ function NewsletterSub() {
             mx: '20px',
           }}
           variant='outlined'
-          placeholder='E-mail'
+          placeholder='e-mail'
         >
           e-mail
         </TextField>

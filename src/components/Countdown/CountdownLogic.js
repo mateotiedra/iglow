@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const CountdownLogic = (admin) => {
   const now = new Date().getTime();
-  const launchDate = new Date('September 1, 2023 00:00:00').getTime();
+  const launchDate = new Date('September 16, 2024 00:00:00').getTime();
   const [countdown, setCountdown] = useState(launchDate - now);
 
   const timeLeftFormatted = {

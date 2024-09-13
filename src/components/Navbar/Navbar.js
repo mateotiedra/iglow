@@ -6,16 +6,11 @@ import {
   AppBar,
   Button,
   Container,
-  IconButton,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
   SwipeableDrawer,
   Typography,
 } from '@mui/material';
 import { Box } from '@mui/system';
-import { HashLink as RouterLink } from 'react-router-hash-link';
+//import { HashLink as RouterLink } from 'react-router-hash-link';
 
 import Iglow from '../../assets/logos/iglow-white.svg';
 import SwissMade from '../../assets/logos/swiss-made.svg';

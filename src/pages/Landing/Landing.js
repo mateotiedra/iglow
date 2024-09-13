@@ -8,7 +8,7 @@ import controller from '../../assets/images/controller.png';
 import mountain from '../../assets/images/mountain.png';
 import { PiQuotesFill } from 'react-icons/pi';
 
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Countdown from '../../components/Countdown/Countdown';

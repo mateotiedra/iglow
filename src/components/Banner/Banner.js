@@ -21,17 +21,17 @@ function Banner({ variant = 'both', top }) {
         overflow: 'hidden',
       }}
     >
-      {(variant == 'black' || variant == 'both') && (
+      {(variant === 'black' || variant === 'both') && (
         <Box
           component='img'
           src={blackBanner}
           sx={{
             ...bannerStyle,
-            top: variant == 'both' ? 'max(3vw, 20px)' : 0,
+            top: variant === 'both' ? 'max(3vw, 20px)' : 0,
           }}
         />
       )}
-      {(variant == 'red' || variant == 'both') && (
+      {(variant === 'red' || variant === 'both') && (
         <Box component='img' src={redBanner} sx={bannerStyle} />
       )}
     </Box>

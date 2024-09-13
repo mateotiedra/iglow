@@ -2,10 +2,8 @@ import React from 'react';
 import {
   Avatar,
   Box,
-  Button,
   Container,
   Divider,
-  TextField,
   Typography,
 } from '@mui/material';
 
@@ -16,7 +14,6 @@ import NoisyContainer from '../NoisyContainer/NoisyContainer';
 import Banner from '../Banner/Banner';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import EmptySpace from '../EmptySpace/EmptySpace';
-import HaveReadCheckbox from '../HaveReadCheckbox/HaveReadCheckbox';
 import NewsletterSub from '../NewsletterSub/NewsletterSub';
 
 function Footer() {

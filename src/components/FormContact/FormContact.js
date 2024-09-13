@@ -31,7 +31,7 @@ function FormContact() {
         id='email'
         options={{
           required: 'Email adress is required',
-          pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+          pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
         }}
         error={errors.email}
       />

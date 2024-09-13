@@ -2,18 +2,12 @@ import Palette from '../../theme/palette.js';
 
 import {
   Box,
-  Button,
-  Checkbox,
-  IconButton,
-  TextField,
   Typography,
 } from '@mui/material';
 import indiegogo from '../../assets/logos/indiegogo-color.svg';
 import kickstarter from '../../assets/logos/kickstarter-color.svg';
-import { PiBellBold } from 'react-icons/pi';
 
 import CountdownLogic from './CountdownLogic';
-import HaveReadCheckbox from '../HaveReadCheckbox/HaveReadCheckbox.js';
 import NewsletterSub from '../NewsletterSub/NewsletterSub.js';
 
 function Countdown() {

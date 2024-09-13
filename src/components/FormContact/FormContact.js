@@ -15,7 +15,7 @@ function FormContact() {
         display: 'flex',
         flexDirection: 'column',
         gap: 2,
-        flexGrow: 1,
+        flex: 1,
       }}
     >
       <FormField

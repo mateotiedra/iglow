@@ -290,20 +290,16 @@ function ContactSection() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
-            flexWtap: 'wrap',
-            gap: 20,
+            flexDirection: { xs: 'column', sm: 'column', md: 'row-reverse' },
+            gap: 10,
           }}
         >
-          <FormContact />
-
-          <Box width='40%'>
+          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'space-between', flexDirection: 'column', gap: 8 }}>
             <Typography color={STATE_GREY} variant='body1'>
               Have a question or interested in a partnership? We'd love to hear
               from you ! Contact our team by filling out the form below, and
               we'll get back to you as soon as possible !
             </Typography>
-            <EmptySpace height={40} />
             <Box
               sx={{
                 display: 'flex',
@@ -327,6 +323,7 @@ function ContactSection() {
               </Typography>
             </Box>
           </Box>
+          <FormContact />
         </Box>
       </Container>
       <EmptySpace />

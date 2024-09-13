@@ -21,7 +21,7 @@ function Footer() {
 
   return (
     <NoisyContainer>
-      <Banner variant='black' top='min(-6vw, -120px)' />
+      <Banner variant='black' top='min(-6vw, -50px)' />
       <Container
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >

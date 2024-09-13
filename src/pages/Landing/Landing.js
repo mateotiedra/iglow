@@ -294,7 +294,16 @@ function ContactSection() {
             gap: 10,
           }}
         >
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'space-between', flexDirection: 'column', gap: 8 }}>
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'space-between',
+              flexDirection: 'column',
+              gap: 8,
+              pb: { xs: 0, sm: 0, md: 10 },
+            }}
+          >
             <Typography color={STATE_GREY} variant='body1'>
               Have a question or interested in a partnership? We'd love to hear
               from you ! Contact our team by filling out the form below, and

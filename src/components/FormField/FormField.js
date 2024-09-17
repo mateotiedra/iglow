@@ -10,20 +10,27 @@ function FormField({
   register,
   id,
   options,
+  noLabel = false,
+  erroAbsPos = false,
+  sx,
   ...props
 }) {
   const { STATE_GREY, GHOST_WHITE, FRENCH_GREY, NIGHT, RED } = Palette();
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Typography
-        variant='caption'
-        color={STATE_GREY}
-        mb={1}
-        textTransform='capitalize'
-      >
-        {label}
-      </Typography>
+    <Box
+      sx={{ display: 'flex', flexDirection: 'column', position: 'relative' }}
+    >
+      {!noLabel && (
+        <Typography
+          variant='caption'
+          color={STATE_GREY}
+          mb={1}
+          textTransform='capitalize'
+        >
+          {label}
+        </Typography>
+      )}
       <Box
         component={rows && rows > 0 ? 'textarea' : 'input'}
         {...register(id, options)}
@@ -52,6 +59,7 @@ function FormField({
           lineHeight: 1.2,
           color: NIGHT,
           resize: 'none',
+          ...sx,
         }}
         {...props}
       />
@@ -59,8 +67,13 @@ function FormField({
         variant='caption'
         sx={{
           color: RED,
-          mt: 0.5,
+          pt: 0.5,
           alignSelf: 'flex-end',
+          position: erroAbsPos ? 'absolute' : 'relative',
+          bottom: erroAbsPos ? 0 : 'auto',
+          left: erroAbsPos ? 0 : 'auto',
+          transform: erroAbsPos ? 'translateY(100%)' : 'none',
+          pl: erroAbsPos ? 1 : 0,
         }}
       >
         {error && error.message}

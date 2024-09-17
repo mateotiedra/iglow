@@ -6,53 +6,62 @@ import {
   BREVO_LIST_ID,
 } from '../../config/AppConfig';
 
-import { Box, Button, TextField } from '@mui/material';
-import HaveReadCheckbox from '../HaveReadCheckbox/HaveReadCheckbox';
-import { PiBellBold } from 'react-icons/pi';
+import { Box, Button, Checkbox, Typography } from '@mui/material';
+import { PiBellBold, PiCheckBold } from 'react-icons/pi';
+import Palette from '../../theme/palette';
+import { useForm } from 'react-hook-form';
+import FormField from '../FormField/FormField';
 
 function NewsletterSub() {
-  const [email, setEmail] = useState('');
-  console.log(email);
-  console.log(BREVO_API_KEY, BREVO_API_URL, BREVO_LIST_ID);
+  const { STATE_GREY } = Palette();
 
-  const handleEmailChange = useCallback(
-    (e) => {
-      setEmail(e.target.value);
-      console.log(email);
-    },
-    [email]
-  );
+  const [policyChecked, setPolicyChecked] = useState(false);
+  const handlePolicyCheck = useCallback(() => {
+    setPolicyChecked((p) => !p);
+  }, []);
 
-  const handleSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
+  const [subscribed, setSubscribed] = useState(false);
 
-      // Data to send
-      const data = {
-        email: email,
-        listIds: [parseInt(BREVO_LIST_ID)],
-        updateEnabled: true,
-      };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm();
 
-      // Set up headers
-      const headers = {
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY,
-      };
+  const postEmail = ({ email }) => {
+    if (!policyChecked) {
+      setError('email', {
+        type: 'custom',
+        message: 'You must accept the privacy policy below',
+      });
+      return;
+    }
+    console.log(email);
 
-      // Make the API call
-      axios
-        .post(BREVO_API_URL, data, { headers })
-        .then((response) => {
-          console.log(response.data);
-          setEmail(''); // clear input field
-        })
-        .catch((error) => {
-          console.error(error.response);
-        });
-    },
-    [email]
-  );
+    // Data to send
+    const data = {
+      email: email,
+      listIds: [parseInt(BREVO_LIST_ID)],
+      updateEnabled: true,
+    };
+
+    // Set up headers
+    const headers = {
+      'Content-Type': 'application/json',
+      'api-key': BREVO_API_KEY,
+    };
+
+    // Make the API call
+    axios
+      .post(BREVO_API_URL, data, { headers })
+      .then((response) => {
+        setSubscribed(true);
+      })
+      .catch((error) => {
+        console.error(error.response);
+      });
+  };
 
   return (
     <Box
@@ -72,27 +81,50 @@ function NewsletterSub() {
           gap: '20px',
           alignItems: 'center',
         }}
+        component='form'
+        onSubmit={handleSubmit(postEmail)}
       >
-        <TextField
-          sx={{
-            flexGrow: 1,
-            mx: '20px',
-          }}
+        <FormField
+          noLabel
+          erroAbsPos
           variant='outlined'
-          placeholder='e-mail'
-          onChange={handleEmailChange}
-        >
-          e-mail
-        </TextField>
+          label='Email'
+          register={register}
+          id='email'
+          options={{
+            required: 'Email adress is required',
+            pattern: {
+              message: 'Invalid email address',
+              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+            },
+          }}
+          error={errors.email}
+          sx={{ borderRadius: 20 }}
+        />
         <Button
           variant='contained'
-          startIcon={<PiBellBold />}
-          onClick={handleSubmit}
+          startIcon={subscribed ? <PiCheckBold /> : <PiBellBold />}
+          onClick={handleSubmit(postEmail)}
         >
-          Get an alert
+          {subscribed ? 'Subscribed!' : 'Get an alert'}
         </Button>
       </Box>
-      <HaveReadCheckbox />
+      <Typography
+        variant='body2'
+        color={STATE_GREY}
+        fontSize='min(3vw, 20px)'
+        onClick={handlePolicyCheck}
+        sx={{ cursor: 'pointer' }}
+      >
+        <Checkbox
+          style={{ position: 'relative', bottom: '2px' }}
+          checked={policyChecked}
+        />
+        I have read and I accept{' '}
+        <Typography component='a' variant='body2' color='primary'>
+          the privacy policy
+        </Typography>
+      </Typography>
     </Box>
   );
 }

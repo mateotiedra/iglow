@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Avatar,
-  Box,
-  Container,
-  Divider,
-  Typography,
-} from '@mui/material';
+import { Avatar, Box, Container, Divider, Typography } from '@mui/material';
 
 import Palette from '../../theme/palette';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
@@ -20,7 +14,7 @@ function Footer() {
   const { STATE_GREY, NIGHT } = Palette();
 
   return (
-    <NoisyContainer>
+    <NoisyContainer id='join'>
       <Banner variant='black' top='min(-6vw, -50px)' />
       <Container
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}

@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import { Box } from '@mui/system';
-//import { HashLink as RouterLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import Iglow from '../../assets/logos/iglow-white.svg';
 import SwissMade from '../../assets/logos/swiss-made.svg';
@@ -134,7 +134,10 @@ function Navbar({ admin, coverPage }) {
               style={{ height: '12px' }}
             />
           </Typography>
-          <Button variant='contained'>Join Us</Button>
+
+          <Button variant='contained' component={HashLink} to='/#join'>
+            Join Us
+          </Button>
           {/* {!empty &&
           navLinksObj.map((linkObj) => {
             return (

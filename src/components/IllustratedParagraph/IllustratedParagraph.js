@@ -32,7 +32,7 @@ function IllustratedParagraph({ reverse, imgSrc, title, overtitle, text }) {
       <Box
         component='img'
         src={imgSrc}
-        sx={{ width: { xs: '70vw', sm: '200%' }, maxWidth: '400px' }}
+        sx={{ width: { xs: '70vw', sm: '200%' }, maxWidth: '300px' }}
       />
     </Box>
   );

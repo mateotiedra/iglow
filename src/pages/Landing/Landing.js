@@ -6,6 +6,7 @@ import trailer from '../../assets/videos/trailer.mp4';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
 import controller from '../../assets/images/controller.png';
+import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
 import { PiQuotesFill } from 'react-icons/pi';
 
@@ -168,6 +169,12 @@ function WhatIsSection() {
           imgSrc={controller}
         />
         <EmptySpace />
+        <IllustratedParagraph
+          overtitle='APPLICATION'
+          title='GlowSafe: Your Road Safety Companion'
+          text="GlowSafe is your go-to mobile app for searching routes and synchronizing Smart Jacket's indicators. Effortlessly find your way and seamlessly control the vest's blinkers for enhanced visibility."
+          imgSrc={appMockup}
+        />
       </Container>
       <Banner variant='black' />
       <Container>
@@ -291,7 +298,7 @@ function ContactSection() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'column', md: 'row-reverse' },
+            flexDirection: { xs: 'column', sm: 'column', md: 'row' },
             gap: 10,
           }}
         >
@@ -319,10 +326,11 @@ function ContactSection() {
             >
               <Typography variant='h3'>IGLOW® Switzerland</Typography>
               <Typography variant='body1'>
-                Pl. de la Palud 2, 1003 Lausanne, Switzerland
-              </Typography>
-              <Typography component='a' href='tel:+41799068852' color={NIGHT}>
-                +41 79 906 88 52
+                Iglow, BP590,
+                <br />
+                1001 Lausanne,
+                <br />
+                Switzerland
               </Typography>
               <Typography
                 component='a'

@@ -1,3 +1,4 @@
+import React from 'react';
 import Palette from '../../theme/palette';
 
 import jacketRedBack from '../../assets/images/jacket-red-back.png';

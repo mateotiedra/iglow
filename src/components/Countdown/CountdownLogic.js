@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const CountdownLogic = (admin) => {
+import { BREVO_CNTDWN_DATE } from '../../config/AppConfig';
+
+const CountdownLogic = () => {
   const now = new Date().getTime();
-  const launchDate = new Date('September 16, 2024 00:00:00').getTime();
+  const launchDate = new Date(BREVO_CNTDWN_DATE).getTime();
   const [countdown, setCountdown] = useState(launchDate - now);
 
   const timeLeftFormatted = {

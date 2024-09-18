@@ -1,8 +1,10 @@
 import React from 'react';
 import Palette from '../../theme/palette';
 
+import { LAUNCH_DATE, END_CAMPAIGN_DATE } from '../../config/AppConfig';
 import jacketRedBack from '../../assets/images/jacket-red-back.png';
 import trailer from '../../assets/videos/trailer.mp4';
+import teaser from '../../assets/videos/teaser.mp4';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
 import controller from '../../assets/images/controller.png';
@@ -40,6 +42,10 @@ function Landing() {
 
 function HeroSection() {
   const { STATE_GREY } = Palette();
+
+  const now = new Date().getTime();
+  const heroVideo = now >= LAUNCH_DATE.getTime() ? trailer : teaser;
+
   return (
     <Box
       sx={{
@@ -124,7 +130,7 @@ function HeroSection() {
             controls
             style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
           >
-            <source src={trailer} />
+            <source src={heroVideo} />
           </video>
         </Container>
       </NoisyContainer>

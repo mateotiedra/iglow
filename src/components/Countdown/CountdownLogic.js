@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { BREVO_CNTDWN_DATE } from '../../config/AppConfig';
+import { LAUNCH_DATE, END_CAMPAIGN_DATE } from '../../config/AppConfig';
 
 const CountdownLogic = () => {
   const now = new Date().getTime();
-  const launchDate = new Date(BREVO_CNTDWN_DATE).getTime();
-  const [countdown, setCountdown] = useState(launchDate - now);
+  const countDownDate =
+    now >= LAUNCH_DATE.getTime() ? END_CAMPAIGN_DATE : LAUNCH_DATE;
+  const [countdown, setCountdown] = useState(countDownDate - now);
 
   const timeLeftFormatted = {
     days: Math.floor(countdown / (1000 * 60 * 60 * 24)),

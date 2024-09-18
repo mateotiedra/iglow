@@ -1,11 +1,12 @@
 import { Box, Button } from '@mui/material';
 
-import { PiPaperPlaneTiltBold } from 'react-icons/pi';
+import { PiCheckBold, PiPaperPlaneTiltBold } from 'react-icons/pi';
 import FormField from '../FormField/FormField';
 import FormContactLogic from './FormContactLogic';
 
 function FormContact() {
-  const { register, handleSubmit, onSubmit, errors } = FormContactLogic();
+  const { register, handleSubmit, onSubmit, errors, emailSent } =
+    FormContactLogic();
 
   return (
     <Box
@@ -53,9 +54,12 @@ function FormContact() {
         LinkComponent='input'
         type='submit'
         variant='contained'
-        startIcon={<PiPaperPlaneTiltBold />}
+        startIcon={emailSent ? <PiCheckBold /> : <PiPaperPlaneTiltBold />}
+        sx={{
+          cursor: emailSent ? 'default' : 'pointer',
+        }}
       >
-        Submit
+        {emailSent ? 'Envoyé' : 'Send'}
       </Button>
     </Box>
   );

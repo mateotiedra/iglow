@@ -5,3 +5,4 @@ export const LAUNCH_DATE = new Date(process.env.REACT_APP_BREVO_LAUNCH_DATE);
 export const END_CAMPAIGN_DATE = new Date(
   process.env.REACT_APP_BREVO_END_CAMPAIGN_DATE
 );
+export const CONTACT_EMAIL = process.env.REACT_APP_CONTACT_EMAIL;

@@ -54,7 +54,7 @@ function NewsletterSub() {
 
     // Make the API call
     axios
-      .post(BREVO_API_URL, data, { headers })
+      .post(BREVO_API_URL + '/contacts', data, { headers })
       .then((response) => {
         setSubscribed(true);
       })

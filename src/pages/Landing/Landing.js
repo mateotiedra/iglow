@@ -1,7 +1,7 @@
 import React from 'react';
 import Palette from '../../theme/palette';
 
-import { LAUNCH_DATE, END_CAMPAIGN_DATE } from '../../config/AppConfig';
+import { LAUNCH_DATE } from '../../config/AppConfig';
 import jacketRedBack from '../../assets/images/jacket-red-back.png';
 import trailer from '../../assets/videos/trailer.mp4';
 import teaser from '../../assets/videos/teaser.mp4';

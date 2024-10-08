@@ -1,53 +1,90 @@
 import { useState } from 'react';
+import jacketLeds from '../../assets/images/jacket-leds.png';
+import ergonomicRemote from '../../assets/images/ergonomic-remote.png';
+import automaticBraking from '../../assets/images/automatic-braking.png';
+import waterResistant from '../../assets/images/water-resistant.png';
+import phonePocket from '../../assets/images/phone-pocket.png';
+import creditCardPocket from '../../assets/images/credit-card-pocket.png';
+import waterBottlePocket from '../../assets/images/water-bottle-pocket.png';
+import retractableKeyholder from '../../assets/images/retractable-keyholder.png';
+import emergencyCard from '../../assets/images/emergency-card.png';
+import backpackCompatible from '../../assets/images/backpack-compatible.png';
+import smartphoneApp from '../../assets/images/smartphone-app.png';
 
 const SpecsSectionLogic = () => {
   const specs = [
     {
       title: 'High Visibility LEDs',
       details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        "Stay visible with 360° high-intensity LEDs, ensuring you're seen in all conditions.",
+      image: jacketLeds,
     },
     {
-      title: 'Hyper Resistant Technical Textile',
+      title: 'Ergonomic Handlebar Remote Control',
       details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-    },
-    {
-      title: 'Waterproof IPXX',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-    },
-    {
-      title: 'High Autonomy Battery',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-    },
-    {
-      title: 'Induction Charging Hanger',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        'Easily control turn signals without taking your eyes off the road.',
+      image: ergonomicRemote,
     },
     {
       title: 'Automatic Braking Detection',
       details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        'Smart sensors activate brake lights automatically for added safety.',
+      image: automaticBraking,
     },
     {
-      title: 'Light and Breathable',
+      title: 'Water Resistant Design',
       details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        'Lightweight, waterproof fabric and zippers keep you and your gear dry.',
+      image: waterResistant,
     },
     {
-      title: 'Rescue Card',
+      title: 'Phone Pocket',
       details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        'Secure, accessible pocket to keep your phone within reach while riding.',
+      image: phonePocket,
+    },
+    {
+      title: 'Credit Card Pocket',
+      details:
+        'Handy pocket for quick access to your credit card and small essentials.',
+      image: creditCardPocket,
+    },
+    {
+      title: 'Water Bottle Pocket',
+      details:
+        'Conveniently store your water bottle for easy access on the go.',
+      image: waterBottlePocket,
+    },
+    {
+      title: 'Retractable Keyholder',
+      details:
+        'Keep your keys secure and within reach with the built-in retractable keyholder.',
+      image: retractableKeyholder,
+    },
+    {
+      title: 'Emergency Card',
+      details:
+        'Store your medical info for quick access by first responders in case of an emergency.',
+      image: emergencyCard,
+    },
+    {
+      title: 'Backpack Compatible',
+      details:
+        'Designed to fit comfortably over your backpack without compromising function.',
+      image: backpackCompatible,
+    },
+    {
+      title: 'Smartphone App',
+      details:
+        'Control signals and track your route seamlessly with the integrated smartphone app.',
+      image: smartphoneApp,
     },
   ];
 
-  const [openAccordionId, setopenAccordionId] = useState(-1);
+  const [openAccordionId, setopenAccordionId] = useState(1);
 
   const handleAccordionChange = (id) => (event, isExpanded) => {
-    setopenAccordionId(isExpanded ? id : -1);
+    setopenAccordionId(id);
   };
 
   return {

@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { PiPlusCircleBold, PiMinusCircleBold } from 'react-icons/pi';
 
-import jacketSpecs from '../../assets/images/jacket-specs.png';
+import smartphoneApp from '../../assets/images/smartphone-app.png';
 
 import SpecsSectionLogic from './SpecsSectionLogic';
 import Palette from '../../theme/palette';
@@ -24,15 +24,18 @@ function SpecsSection() {
           xs: 'column-reverse',
           sm: 'row',
         },
-        alignItems: 'center',
+        alignItems: 'start',
         maxWidth: '1100px',
-        gap: {
-          xs: 4,
-          sm: '15%',
-        },
+        gap: 3,
+        position: 'relative',
       }}
     >
-      <Box>
+      <Box
+        sx={{
+          flex: 1,
+          maxwidth: '500px',
+        }}
+      >
         {specs.map((spec, id) => {
           const selected = openAccordionId === id;
           return (
@@ -73,9 +76,27 @@ function SpecsSection() {
         })}
       </Box>
       <Box
+        sx={{
+          width: '100%',
+          flex: 1,
+        }}
+      />
+      <Box
         component='img'
-        src={jacketSpecs}
-        sx={{ width: { xs: '70vw', sm: '200%' }, maxWidth: '400px' }}
+        src={specs[openAccordionId].image}
+        sx={{
+          position: 'absolute',
+          width: '50%',
+          right: 0,
+          transform:
+            'translateY(-' +
+            ((openAccordionId / specs.length) * 100).toString().split('.')[0] +
+            '%)',
+          top:
+            ((openAccordionId / specs.length) * 100).toString().split('.')[0] +
+            '%',
+          transition: 'top 0.4s',
+        }}
       />
     </Box>
   );

@@ -223,7 +223,7 @@ function SocialSection() {
       <Container
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
-        <SectionTitle
+        {/* <SectionTitle
           overtitle='They talk about us'
           title='IGLOW® also'
           highlight='shine in the press'
@@ -239,7 +239,7 @@ function SocialSection() {
           pioneering extension of the cycling gear market, inviting cyclists to
           protect themselves against the daily perils of the road.
         </Typography>
-        <EmptySpace />
+        <EmptySpace /> */}
         <SectionTitle
           overtitle='About us'
           title='Discover the'
@@ -265,6 +265,7 @@ function SocialSection() {
           <IdCard src='alena.png' name='Alena' role='Sweing queen' />
           <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
           <IdCard src='sam.png' name='Sam' role='Cybersecurity Engineer' />
+          <IdCard src='sam.png' name='Ophélie' role='Community Manager' />
         </Box>
         <EmptySpace />
         {/* <SectionTitle

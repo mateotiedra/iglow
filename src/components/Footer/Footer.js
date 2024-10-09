@@ -10,6 +10,7 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import EmptySpace from '../EmptySpace/EmptySpace';
 import NewsletterSub from '../NewsletterSub/NewsletterSub';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function Footer() {
   const { STATE_GREY, NIGHT } = Palette();
@@ -46,8 +47,8 @@ function Footer() {
             <Typography variant='subtitle2'>Legal Notice</Typography>
             <Typography
               variant='subtitle2'
-              component={Link}
-              to='privacy-policy'
+              component={HashLink}
+              to='/privacy-policy'
               sx={{ textDecoration: 'none', color: 'inherit' }}
             >
               Privacy Policy

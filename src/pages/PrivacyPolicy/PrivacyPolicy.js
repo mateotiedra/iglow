@@ -8,7 +8,7 @@ function PrivacyPolicy() {
   return (
     <>
       <Navbar />
-      <EmptySpace />
+      <EmptySpace id='start' />
       <EmptySpace />
 
       <Container>

@@ -88,6 +88,8 @@ function Navbar({ admin, coverPage }) {
             flexDirection='row'
             alignItems='center'
             gap='16px'
+            component={HashLink}
+            to='/'
           >
             <Box
               component='img'

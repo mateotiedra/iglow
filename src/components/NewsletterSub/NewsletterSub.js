@@ -11,6 +11,7 @@ import { PiBellBold, PiCheckBold } from 'react-icons/pi';
 import Palette from '../../theme/palette';
 import { useForm } from 'react-hook-form';
 import FormField from '../FormField/FormField';
+import { HashLink } from 'react-router-hash-link';
 
 function NewsletterSub() {
   const { STATE_GREY } = Palette();
@@ -174,7 +175,12 @@ function NewsletterSub() {
           checked={policyChecked}
         />
         I have read and I accept{' '}
-        <Typography component='a' variant='body2' color='primary'>
+        <Typography
+          component={HashLink}
+          to='/privacy-policy#start'
+          variant='body2'
+          color='primary'
+        >
           the privacy policy
         </Typography>
       </Typography>

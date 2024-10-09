@@ -9,6 +9,7 @@ import Banner from '../Banner/Banner';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import EmptySpace from '../EmptySpace/EmptySpace';
 import NewsletterSub from '../NewsletterSub/NewsletterSub';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const { STATE_GREY, NIGHT } = Palette();
@@ -43,7 +44,14 @@ function Footer() {
           >
             <Typography variant='subtitle2'>©IGLOW® 2023</Typography>
             <Typography variant='subtitle2'>Legal Notice</Typography>
-            <Typography variant='subtitle2'>Privacy Policy</Typography>
+            <Typography
+              variant='subtitle2'
+              component={Link}
+              to='privacy-policy'
+              sx={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              Privacy Policy
+            </Typography>
           </Box>
           <Box
             color={STATE_GREY}

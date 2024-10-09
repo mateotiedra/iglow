@@ -19,11 +19,12 @@ const FormContactLogic = () => {
   const onSubmit = async (data) => {
     if (emailSent) return;
 
-    const emailPayload = {
-      sender: { name: 'Webmaster Iglow', email: 'webmaster@iglow.bike' },
-      to: [{ email: CONTACT_EMAIL }],
-      subject: 'Nouveau message du formulaire de contact',
-      htmlContent: `<body>
+    const emailPayloads = [
+      {
+        sender: { name: 'Webmaster Iglow', email: 'webmaster@iglow.bike' },
+        to: [{ email: CONTACT_EMAIL }],
+        subject: 'Nouveau message du formulaire de contact',
+        htmlContent: `<body>
         <div>
           <h2>Nouveau message du formulaire de contact</h2>
           <div>
@@ -35,21 +36,62 @@ const FormContactLogic = () => {
           </div>
         </div>
       </body>`,
-    };
+      },
+      {
+        sender: { name: 'Iglow', email: 'contact@iglow.bike' },
+        to: [{ email: data.email }],
+        subject: 'Weclome to Iglow',
+        htmlContent: `
+        <body>
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                <table width="600" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <h1>Thank You for Contacting Us!</h1>
+                      <p>Hello ${data.name},</p>
+                      <p>We have successfully received your message. One of our team members will get back to you shortly.</p>
+                      <p>Here are the details of your submission:</p>
+                        <strong>Name:</strong> ${data.name}<br/>
+                        <strong>Message:</strong>
+                        <p style="font-style: italic;">${data.message.replaceAll(
+                          '\n',
+                          '<br/>'
+                        )}</p>
+                      <p>Best regards,</p>
+                      <p>The Iglow Team</p>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td>
+                    <p>&copy; 2024 Iglow. All rights reserved.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+      </body>`,
+      },
+    ];
 
     try {
-      const response = await axios.post(
-        BREVO_API_URL + '/smtp/email',
-        emailPayload,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'api-key': BREVO_API_KEY,
-          },
-        }
-      );
+      for (const emailPayload of emailPayloads) {
+        const response = await axios.post(
+          BREVO_API_URL + '/smtp/email',
+          emailPayload,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'api-key': BREVO_API_KEY,
+            },
+          }
+        );
+        console.log('Email sent successfully:', response.data);
+      }
+
       setEmailSent(true);
-      console.log('Email sent successfully:', response.data);
     } catch (error) {
       console.error('Error sending email:', error);
     }

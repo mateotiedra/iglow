@@ -85,13 +85,18 @@ function SpecsSection() {
         component='img'
         src={specs[openAccordionId].image}
         sx={{
-          position: 'absolute',
-          width: '50%',
+          position: { xs: 'inline', sm: 'absolute' },
+          width: { xs: '100%', sm: '50%' },
           right: 0,
-          transform:
-            'translateY(-' +
-            ((openAccordionId / specs.length) * 100).toString().split('.')[0] +
-            '%)',
+          transform: {
+            xs: '',
+            sm:
+              'translateY(-' +
+              ((openAccordionId / specs.length) * 100)
+                .toString()
+                .split('.')[0] +
+              '%)',
+          },
           top:
             ((openAccordionId / specs.length) * 100).toString().split('.')[0] +
             '%',

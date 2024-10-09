@@ -11,7 +11,7 @@ function IdCard({ src, name, role }) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'start',
-        width: { xs: '130px', sm: '200px', md: '250px' },
+        width: { xs: '130px', sm: '200px', md: '200px' },
       }}
     >
       <Box component='img' src={'/images/team/' + src} width='100%' />

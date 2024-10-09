@@ -256,18 +256,15 @@ function SocialSection() {
         >
           <IdCard src='fabrice.png' name='Fabrice' role='Co-founder' />
           <IdCard src='lucas.png' name='Lucas' role='Co-founder' />
-          <IdCard src='alena.png' name='Alena' role='Sweing queen' />
-          <IdCard src='mateo.png' name='Mateo' role='Developer' />
+          <IdCard src='mateo.png' name='Mateo' role='Lead Developer' />
           <IdCard
             src='jean-baptiste.png'
             name='Jean-Baptiste'
             role='Videographer'
           />
-          <IdCard
-            src='maxime.png'
-            name='Maxime'
-            role='Visual identity manager'
-          />
+          <IdCard src='alena.png' name='Alena' role='Sweing queen' />
+          <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
+          <IdCard src='sam.png' name='Sam' role='Cybersecurity Engineer' />
         </Box>
         <EmptySpace />
         {/* <SectionTitle

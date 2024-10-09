@@ -10,7 +10,6 @@ import smartJacket from '../../assets/images/smart-jacket.png';
 import controller from '../../assets/images/controller.png';
 import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
-import { PiQuotesFill } from 'react-icons/pi';
 
 import { Box, Container, Typography } from '@mui/material';
 
@@ -216,7 +215,6 @@ function WhatIsSection() {
 }
 
 function SocialSection() {
-  const { STATE_GREY, RED } = Palette();
   return (
     <NoisyContainer>
       <Banner top='min(-17vw, -120px)' />

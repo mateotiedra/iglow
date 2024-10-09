@@ -9,7 +9,6 @@ import Banner from '../Banner/Banner';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import EmptySpace from '../EmptySpace/EmptySpace';
 import NewsletterSub from '../NewsletterSub/NewsletterSub';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 function Footer() {

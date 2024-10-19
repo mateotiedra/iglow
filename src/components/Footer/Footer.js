@@ -43,7 +43,14 @@ function Footer() {
             }}
           >
             <Typography variant='subtitle2'>©IGLOW® 2023</Typography>
-            <Typography variant='subtitle2'>Legal Notice</Typography>
+            <Typography
+              variant='subtitle2'
+              component={HashLink}
+              sx={{ textDecoration: 'none', color: 'inherit' }}
+              to='/legal-notices'
+            >
+              Legal Notice
+            </Typography>
             <Typography
               variant='subtitle2'
               component={HashLink}

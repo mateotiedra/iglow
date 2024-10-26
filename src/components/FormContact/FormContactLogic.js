@@ -5,6 +5,7 @@ import {
   BREVO_API_KEY,
   BREVO_API_URL,
   CONTACT_EMAIL,
+  SENDER_EMAIL,
 } from '../../config/AppConfig';
 
 const FormContactLogic = () => {
@@ -21,7 +22,7 @@ const FormContactLogic = () => {
 
     const emailPayloads = [
       {
-        sender: { name: 'Webmaster Iglow', email: 'webmaster@iglow.bike' },
+        sender: { name: 'Webmaster Iglow', email: SENDER_EMAIL },
         to: [{ email: CONTACT_EMAIL }],
         subject: 'Nouveau message du formulaire de contact',
         htmlContent: `<body>
@@ -38,7 +39,7 @@ const FormContactLogic = () => {
       </body>`,
       },
       {
-        sender: { name: 'Iglow', email: 'contact@iglow.bike' },
+        sender: { name: 'Iglow', email: SENDER_EMAIL },
         to: [{ email: data.email }],
         subject: 'Weclome to Iglow',
         htmlContent: `

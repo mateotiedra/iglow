@@ -6,3 +6,4 @@ export const END_CAMPAIGN_DATE = new Date(
   process.env.REACT_APP_BREVO_END_CAMPAIGN_DATE
 );
 export const CONTACT_EMAIL = process.env.REACT_APP_CONTACT_EMAIL;
+export const SENDER_EMAIL = process.env.REACT_APP_SENDER_EMAIL;

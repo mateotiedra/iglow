@@ -169,8 +169,8 @@ function WhatIsSection() {
         <IllustratedParagraph
           reverse
           overtitle='Flexibility'
-          title='Ergonomic Remote Control'
-          text='To control the turn signals, the Smart Jacket is equipped with a remote control that enables users to effortlessly activate them with a simple thumb press, without needing to glance at their fingers and while staying focused on the road.'
+          title='The Smart Remote'
+          text='Keep your eyes on the road while controlling your safety with the iGlow remote – effortless visibility at your fingertips.'
           imgSrc={controller}
         />
         <EmptySpace />
@@ -252,18 +252,17 @@ function SocialSection() {
             justifyContent: 'center',
           }}
         >
-          <IdCard src='fabrice.png' name='Fabrice' role='Co-founder' />
-          <IdCard src='lucas.png' name='Lucas' role='Co-founder' />
+          <IdCard src='fabrice.png' name='Fabrice' role='Founder' />
+          <IdCard src='lucas.png' name='Lucas' role='Electronic Engineer' />
           <IdCard src='mateo.png' name='Mateo' role='Lead Developer' />
+          <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
           <IdCard
             src='jean-baptiste.png'
             name='Jean-Baptiste'
             role='Videographer'
           />
-          <IdCard src='alena.png' name='Alena' role='Sweing queen' />
-          <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
-          <IdCard src='sam.png' name='Sam' role='Cybersecurity Engineer' />
-          <IdCard src='sam.png' name='Ophélie' role='Community Manager' />
+          <IdCard src='alena.png' name='Alena' role='Sewing queen' />
+          <IdCard src='sam.png' name='Sam' role='Digital Media Spécialist' />
         </Box>
         <EmptySpace />
         {/* <SectionTitle

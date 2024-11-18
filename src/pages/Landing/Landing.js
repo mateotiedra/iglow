@@ -3,6 +3,8 @@ import Palette from '../../theme/palette';
 
 import { LAUNCH_DATE } from '../../config/AppConfig';
 import jacketRedBack from '../../assets/images/jacket-red-back.png';
+import schoeller from '../../assets/images/partners/schoeller.png';
+import systronic from '../../assets/images/partners/systronic.png';
 import trailer from '../../assets/videos/trailer.mp4';
 import teaser from '../../assets/videos/teaser.mp4';
 import subtractShape from '../../assets/images/subtract.png';
@@ -199,6 +201,22 @@ function WhatIsSection() {
           reverse
         />
         <EmptySpace under='h2' />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            width: '100%',
+            gap: { xs: 2, sm: 10 },
+          }}
+        >
+          <img src={schoeller} style={{ maxWidth: '30%' }} alt='schoeller' />
+          <Typography color={STATE_GREY} textAlign='center'>
+            X
+          </Typography>
+          <img src={systronic} style={{ maxWidth: '50%' }} alt='systronic' />
+        </Box>
+        <EmptySpace under='h2' />
         <Typography color={STATE_GREY} textAlign='center'>
           The Smart Jacket is the culmination of over 3 years of Swiss research
           and engineering. We are dedicated to offering our customers
@@ -253,15 +271,15 @@ function SocialSection() {
           }}
         >
           <IdCard src='fabrice.png' name='Fabrice' role='Founder' />
-          <IdCard src='lucas.png' name='Lucas' role='Electronic Engineer' />
+          <IdCard src='alena.png' name='Alena' role='Sewing queen' />
           <IdCard src='mateo.png' name='Mateo' role='Lead Developer' />
+          <IdCard src='lucas.png' name='Lucas' role='Electronic Engineer' />
           <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
           <IdCard
             src='jean-baptiste.png'
             name='Jean-Baptiste'
             role='Videographer'
           />
-          <IdCard src='alena.png' name='Alena' role='Sewing queen' />
           <IdCard src='sam.png' name='Sam' role='Digital Media Spécialist' />
         </Box>
         <EmptySpace />

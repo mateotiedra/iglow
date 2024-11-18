@@ -42,7 +42,7 @@ function Footer() {
               gap: 5,
             }}
           >
-            <Typography variant='subtitle2'>©IGLOW® 2023</Typography>
+            <Typography variant='subtitle2'>©IGLOW® 2024</Typography>
             <Typography
               variant='subtitle2'
               component={HashLink}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Palette from '../../theme/palette';
 
-import { LAUNCH_DATE } from '../../config/AppConfig';
+import { CONTACT_EMAIL } from '../../config/AppConfig';
 import jacketHero from '../../assets/images/jacket-hero.png';
 import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
@@ -402,10 +402,10 @@ function ContactSection() {
               </Typography>
               <Typography
                 component='a'
-                href='mailto:contact@iglow.bike'
+                href={'mailto:' + CONTACT_EMAIL}
                 color={NIGHT}
               >
-                contact@iglow.bike
+                {CONTACT_EMAIL}
               </Typography>
             </Box>
           </Box>

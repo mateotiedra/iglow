@@ -5,8 +5,7 @@ import { LAUNCH_DATE } from '../../config/AppConfig';
 import jacketHero from '../../assets/images/jacket-hero.png';
 import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
-import trailer from '../../assets/videos/trailer.mp4';
-import teaser16x9 from '../../assets/videos/teaser/16x9.mp4';
+import trailer16x9 from '../../assets/videos/trailer/16x9.mp4';
 import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
 import topspot16x9 from '../../assets/videos/topspot/16x9.mp4';
 import trailerThumbnail from '../../assets/images/trailer-thumbnail.png';
@@ -46,9 +45,6 @@ function Landing() {
 
 function HeroSection() {
   const { STATE_GREY } = Palette();
-
-  const now = new Date().getTime();
-  const heroVideo = now >= LAUNCH_DATE.getTime() ? trailer : teaser16x9;
 
   return (
     <Box
@@ -183,7 +179,7 @@ function HeroSection() {
             style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
             poster={trailerThumbnail}
           >
-            <source src={heroVideo} />
+            <source src={trailer16x9} />
           </video>
         </Container>
       </NoisyContainer>

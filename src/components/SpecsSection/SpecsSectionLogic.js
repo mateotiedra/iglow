@@ -38,9 +38,9 @@ const SpecsSectionLogic = () => {
       image: waterResistant,
     },
     {
-      title: 'Phone Pocket',
+      title: 'Charging phone pocket',
       details:
-        'Secure, accessible pocket to keep your phone within reach while riding.',
+        'Secure, accessible pocket to charge and keep your phone close to you.',
       image: phonePocket,
     },
     {

@@ -4,6 +4,7 @@ import {
   BREVO_API_KEY,
   BREVO_API_URL,
   BREVO_LIST_ID,
+  SENDER_EMAIL,
 } from '../../config/AppConfig';
 
 import { Box, Button, Checkbox, Typography } from '@mui/material';
@@ -54,7 +55,7 @@ function NewsletterSub() {
     };
 
     const emailPayload = {
-      sender: { name: 'Iglow', email: 'contact@iglow.bike' },
+      sender: { name: 'Iglow', email: SENDER_EMAIL },
       to: [{ email: data.email }],
       subject: 'Get Ready to Discover the IGLOW Smart Jacket!',
       htmlContent: `<body>

@@ -66,10 +66,8 @@ function Navbar({ admin, coverPage }) {
       <AppBar
         elevation={0}
         sx={{
-          position: 'fixed',
-          background: 'rgba(0, 0, 0, 0.9)',
-          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-          backdropFilter: 'blur(20px)',
+          background: 'transparent',
+          position: 'absolute',
         }}
       >
         <Container

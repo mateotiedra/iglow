@@ -179,6 +179,7 @@ function NewsletterSub() {
           component={HashLink}
           to='/privacy-policy#start'
           variant='body2'
+          fontSize='min(3vw, 20px)'
           color='primary'
         >
           the privacy policy

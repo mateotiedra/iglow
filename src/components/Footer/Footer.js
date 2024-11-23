@@ -38,7 +38,11 @@ function Footer() {
             color={STATE_GREY}
             sx={{
               display: 'flex',
-              flexDirection: 'row',
+              flexDirection: {
+                xs: 'column',
+                sm: 'column',
+                md: 'row',
+              },
               gap: 5,
             }}
           >
@@ -62,7 +66,15 @@ function Footer() {
           </Box>
           <Box
             color={STATE_GREY}
-            sx={{ display: 'flex', flexDirection: 'row', gap: 5 }}
+            sx={{
+              display: 'flex',
+              flexDirection: {
+                xs: 'column',
+                sm: 'column',
+                md: 'row',
+              },
+              gap: 5,
+            }}
           >
             <Avatar sx={{ backgroundColor: NIGHT }}>
               <FaInstagram

@@ -7,7 +7,7 @@ function EmptySpace({ under, height }) {
         height: height
           ? { xs: height / 2, sm: height }
           : under === 'h1'
-          ? { xs: 24, sm: 68 }
+          ? { xs: 24, sm: 42 }
           : under === 'h2'
           ? { xs: 24, sm: 68 }
           : under === 'h4'

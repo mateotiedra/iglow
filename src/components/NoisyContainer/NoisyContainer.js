@@ -4,10 +4,7 @@ import noisyFilter from '../../assets/images/noisy-filter.png';
 
 function NoisyContainer({ children, ...props }) {
   return (
-    <Box
-      sx={{ backgroundImage: `url(${noisyFilter})`, width: '100%' }}
-      {...props}
-    >
+    <Box sx={{ width: '100%' }} {...props}>
       {children}
     </Box>
   );

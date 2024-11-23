@@ -2,11 +2,13 @@ import React from 'react';
 import Palette from '../../theme/palette';
 
 import { LAUNCH_DATE } from '../../config/AppConfig';
-import jacketRedBack from '../../assets/images/jacket-red-back.png';
+import jacketHero from '../../assets/images/jacket-hero.png';
 import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
 import trailer from '../../assets/videos/trailer.mp4';
-import teaser from '../../assets/videos/teaser.mp4';
+import teaser16x9 from '../../assets/videos/teaser/16x9.mp4';
+import teaser1x1 from '../../assets/videos/teaser/1x1.mp4';
+import trailerThumbnail from '../../assets/images/trailer-thumbnail.png';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
 import controller from '../../assets/images/controller.png';
@@ -22,47 +24,91 @@ import IllustratedParagraph from '../../components/IllustratedParagraph/Illustra
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import SpecsSection from '../../components/SpecsSection/SpecsSection';
 import Banner from '../../components/Banner/Banner';
-import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
 import IdCard from '../../components/IdCard/IdCard';
 import FAQSection from '../../components/FAQSection/FAQSection';
 import FormContact from '../../components/FormContact/FormContact';
 import Footer from '../../components/Footer/Footer';
+import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
 
 function Landing() {
   return (
-    <>
+    <Box overflow='hidden'>
       <Navbar />
       <HeroSection />
       <WhatIsSection />
       <SocialSection />
       <ContactSection />
       <Footer />
-    </>
+    </Box>
   );
 }
 
 function HeroSection() {
   const { STATE_GREY } = Palette();
 
-  const now = new Date().getTime();
-  const heroVideo = now >= LAUNCH_DATE.getTime() ? trailer : teaser;
-
   return (
     <Box
       sx={{
         position: 'relative',
         width: '100%',
+        backgroundColor: 'black',
       }}
     >
       <NoisyContainer>
+        <Box
+          sx={{
+            width: '100%',
+            marginBottom: '60px',
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            paddingTop: { xs: '100px', sm: '60px', md: 0 },
+          }}
+        >
+          <Box
+            component='video'
+            src={teaser1x1}
+            sx={{
+              width: '100vw',
+              display: { xs: 'inline', sm: 'inline', md: 'none' },
+            }}
+            alt='teaser'
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <Box
+            component='video'
+            src={teaser16x9}
+            sx={{
+              width: '100vw',
+              display: { xs: 'none', sm: 'none', md: 'inline' },
+            }}
+            alt='teaser'
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <Box
+            sx={{
+              height: '100px',
+              width: '100%',
+              position: 'relative',
+              top: '-100px',
+              background: 'linear-gradient(0deg, black, transparent)',
+            }}
+          />
+        </Box>
         <Container
           sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             pt: {
-              xs: '20vh',
-              sm: '22vh',
+              xs: '60vh',
+              sm: '80vh',
             },
           }}
         >
@@ -72,66 +118,51 @@ function HeroSection() {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
+              zIndex: '20',
             }}
             maxWidth='770px'
           >
             <Typography variant='h1'>
-              Be seen{' '}
+              IGLOW : The Smart Bike Jacket -{' '}
               <Typography component='span' variant='h1' color='primary'>
-                stay safe
-              </Typography>{' '}
-              : Innovation in motion
+                Be Seen
+              </Typography>
+              {', '}
+              Be Safe
             </Typography>
             <EmptySpace under='h1' />
             <Typography variant='body1' color={STATE_GREY}>
-              Introducing the Smart Jacket : the smart, stylish, and secure
-              choice that enhances road safety like never before.
+              The world's first smart jacket – the ultimate fusion of style,
+              technology and Swiss quality.
             </Typography>
           </Box>
-          <Box
-            sx={{
-              width: '100vw',
+          <img
+            src={jacketHero}
+            style={{
+              width: '80vw',
+              maxWidth: '600px',
+              marginTop: '60px',
+              marginBottom: '60px',
               position: 'relative',
-              minWidth: '500px',
-              maxWidth: '700px',
-              px: '8%',
+              left: '30px',
             }}
-          >
-            <img
-              src={jacketRedBack}
-              style={{
-                width: '110%',
-                marginBottom: '60px',
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              alt='jacket'
-            />
-            <img
-              src={jacketRedBack}
-              style={{
-                width: '110%',
-                opacity: 0,
-              }}
-              alt='jacket'
-            />
-          </Box>
+            alt='jacket'
+          />
           <Countdown />
           <EmptySpace />
           <Typography variant='h2' sx={{ textAlign: 'center' }}>
             Lights, Cameras, Action !
           </Typography>
-          <Typography variant='h2' color='primary'>
+          <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
             Unveiling the IGLOW® Smart Jacket
           </Typography>
           <EmptySpace under='h2' />
           <video
             controls
             style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
+            poster={trailerThumbnail}
           >
-            <source src={heroVideo} />
+            <source src={trailer} />
           </video>
         </Container>
       </NoisyContainer>
@@ -153,7 +184,7 @@ function WhatIsSection() {
   const { NIGHT, STATE_GREY } = Palette();
   return (
     <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
-      <Container>
+      <Container sx={{ width: '100%' }}>
         <EmptySpace />
         <SectionTitle
           overtitle='WHAT IS IGLOW ?'
@@ -280,7 +311,7 @@ function SocialSection() {
             name='Jean-Baptiste'
             role='Videographer'
           />
-          <IdCard src='sam.png' name='Sam' role='Digital Media Spécialist' />
+          <IdCard src='sam.png' name='Sam' role='Digital Media Specialist' />
         </Box>
         <EmptySpace />
         {/* <SectionTitle

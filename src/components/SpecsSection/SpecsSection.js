@@ -7,8 +7,6 @@ import {
 } from '@mui/material';
 import { PiPlusCircleBold, PiMinusCircleBold } from 'react-icons/pi';
 
-import smartphoneApp from '../../assets/images/smartphone-app.png';
-
 import SpecsSectionLogic from './SpecsSectionLogic';
 import Palette from '../../theme/palette';
 

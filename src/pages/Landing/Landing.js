@@ -7,7 +7,8 @@ import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
 import trailer from '../../assets/videos/trailer.mp4';
 import teaser16x9 from '../../assets/videos/teaser/16x9.mp4';
-import teaser1x1 from '../../assets/videos/teaser/1x1.mp4';
+import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
+import topspot16x9 from '../../assets/videos/topspot/16x9.mp4';
 import trailerThumbnail from '../../assets/images/trailer-thumbnail.png';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
@@ -46,6 +47,9 @@ function Landing() {
 function HeroSection() {
   const { STATE_GREY } = Palette();
 
+  const now = new Date().getTime();
+  const heroVideo = now >= LAUNCH_DATE.getTime() ? trailer : teaser16x9;
+
   return (
     <Box
       sx={{
@@ -62,44 +66,61 @@ function HeroSection() {
             position: 'absolute',
             left: '50%',
             transform: 'translateX(-50%)',
-            paddingTop: { xs: '100px', sm: '60px', md: 0 },
+            paddingTop: { xs: '30px', sm: 'calc(60px-10vw)', xl: 0 },
           }}
         >
           <Box
-            component='video'
-            src={teaser1x1}
             sx={{
-              width: '100vw',
-              display: { xs: 'inline', sm: 'inline', md: 'none' },
-            }}
-            alt='teaser'
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <Box
-            component='video'
-            src={teaser16x9}
-            sx={{
-              width: '100vw',
-              display: { xs: 'none', sm: 'none', md: 'inline' },
-            }}
-            alt='teaser'
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <Box
-            sx={{
-              height: '100px',
+              height: '100%',
               width: '100%',
               position: 'relative',
-              top: '-100px',
-              background: 'linear-gradient(0deg, black, transparent)',
             }}
-          />
+          >
+            <Box
+              sx={{
+                height: '100px',
+                width: '100%',
+                position: 'absolute',
+                top: 0,
+                background: 'linear-gradient(180deg, black, transparent)',
+              }}
+            />
+            <Box
+              component='video'
+              src={topspot1x1}
+              sx={{
+                width: '100vw',
+                display: { xs: 'inline', sm: 'inline', md: 'none' },
+              }}
+              alt='teaser'
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <Box
+              component='video'
+              src={topspot16x9}
+              sx={{
+                width: '100vw',
+                display: { xs: 'none', sm: 'none', md: 'inline' },
+              }}
+              alt='teaser'
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <Box
+              sx={{
+                height: '100px',
+                width: '100%',
+                position: 'relative',
+                top: '-100px',
+                background: 'linear-gradient(0deg, black, transparent)',
+              }}
+            />
+          </Box>
         </Box>
         <Container
           sx={{
@@ -142,9 +163,9 @@ function HeroSection() {
               width: '80vw',
               maxWidth: '600px',
               marginTop: '60px',
-              marginBottom: '60px',
+              marginBottom: '40px',
               position: 'relative',
-              left: '30px',
+              left: '10px',
             }}
             alt='jacket'
           />
@@ -162,7 +183,7 @@ function HeroSection() {
             style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
             poster={trailerThumbnail}
           >
-            <source src={trailer} />
+            <source src={heroVideo} />
           </video>
         </Container>
       </NoisyContainer>
@@ -327,6 +348,7 @@ function SocialSection() {
 
 function ContactSection() {
   const { NIGHT, STATE_GREY } = Palette();
+
   return (
     <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
       <Container>

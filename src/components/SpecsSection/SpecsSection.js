@@ -67,6 +67,17 @@ function SpecsSection() {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
+                <Box
+                  component='img'
+                  src={specs[openAccordionId].image}
+                  sx={{
+                    position: 'inline',
+                    display: { xs: 'block', sm: 'none' },
+                    width: '100%',
+                    right: 0,
+                    marginBottom: 2,
+                  }}
+                />
                 <Typography color={STATE_GREY} variant='body2'>
                   {spec.details}
                 </Typography>
@@ -86,6 +97,7 @@ function SpecsSection() {
         src={specs[openAccordionId].image}
         sx={{
           position: { xs: 'inline', sm: 'absolute' },
+          display: { xs: 'none', sm: 'inline' },
           width: { xs: '100%', sm: '50%' },
           right: 0,
           transform: {

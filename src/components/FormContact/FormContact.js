@@ -34,7 +34,7 @@ function FormContact() {
           required: 'Email adress is required',
           pattern: {
             message: 'Invalid email address',
-            value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+            value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,10}$/,
           },
         }}
         error={errors.email}

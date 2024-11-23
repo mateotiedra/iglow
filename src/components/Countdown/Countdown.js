@@ -1,9 +1,6 @@
 import Palette from '../../theme/palette.js';
 
-import {
-  Box,
-  Typography,
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import indiegogo from '../../assets/logos/indiegogo-color.svg';
 import kickstarter from '../../assets/logos/kickstarter-color.svg';
 
@@ -90,6 +87,7 @@ function Countdown() {
           flexDirection: { xs: 'column', sm: 'row' },
           alignItems: { xs: 'center', sm: 'baseline' },
           gap: '8px',
+          marginBottom: '30px',
         }}
       >
         <Typography variant='body2' textAlign='center'>

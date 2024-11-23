@@ -34,7 +34,7 @@ function NewsletterSub() {
     if (!policyChecked) {
       setError('email', {
         type: 'custom',
-        message: 'You must accept the privacy policy below',
+        message: 'You must accept the privacy policy above',
       });
       return;
     }
@@ -124,45 +124,10 @@ function NewsletterSub() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: '30px',
+        gap: '10px',
         maxWidth: '600px',
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          gap: '20px',
-          alignItems: 'center',
-        }}
-        component='form'
-        onSubmit={handleSubmit(postEmail)}
-      >
-        <FormField
-          noLabel
-          erroAbsPos
-          variant='outlined'
-          label='Email'
-          register={register}
-          id='email'
-          options={{
-            required: 'Email adress is required',
-            pattern: {
-              message: 'Invalid email address',
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-            },
-          }}
-          error={errors.email}
-          sx={{ borderRadius: 20 }}
-        />
-        <Button
-          variant='contained'
-          startIcon={subscribed ? <PiCheckBold /> : <PiBellBold />}
-          onClick={handleSubmit(postEmail)}
-        >
-          {subscribed ? 'Subscribed!' : 'Get an alert'}
-        </Button>
-      </Box>
       <Typography
         variant='body2'
         color={STATE_GREY}
@@ -185,6 +150,41 @@ function NewsletterSub() {
           the privacy policy
         </Typography>
       </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          gap: '20px',
+          alignItems: 'center',
+        }}
+        component='form'
+        onSubmit={handleSubmit(postEmail)}
+      >
+        <FormField
+          noLabel
+          erroAbsPos
+          variant='outlined'
+          label='Email'
+          register={register}
+          id='email'
+          options={{
+            required: 'Email adress is required',
+            pattern: {
+              message: 'Invalid email address',
+              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,10}$/,
+            },
+          }}
+          error={errors.email}
+          sx={{ borderRadius: 20 }}
+        />
+        <Button
+          variant='contained'
+          startIcon={subscribed ? <PiCheckBold /> : <PiBellBold />}
+          onClick={handleSubmit(postEmail)}
+        >
+          {subscribed ? 'Subscribed!' : 'Get an alert'}
+        </Button>
+      </Box>
     </Box>
   );
 }

@@ -4,8 +4,8 @@ import { LAUNCH_DATE, END_CAMPAIGN_DATE } from '../../config/AppConfig';
 
 const CountdownLogic = () => {
   const now = new Date().getTime();
-  const countDownDate =
-    now >= LAUNCH_DATE.getTime() ? END_CAMPAIGN_DATE : LAUNCH_DATE;
+  const campaignRunning = now >= LAUNCH_DATE.getTime();
+  const countDownDate = campaignRunning ? END_CAMPAIGN_DATE : LAUNCH_DATE;
   const [countdown, setCountdown] = useState(countDownDate - now);
 
   const timeLeftFormatted = {
@@ -31,7 +31,7 @@ const CountdownLogic = () => {
     };
   }, []);
 
-  return { ...timeLeftFormatted };
+  return { ...timeLeftFormatted, campaignRunning };
 };
 
 export default CountdownLogic;

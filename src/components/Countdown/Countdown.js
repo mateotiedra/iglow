@@ -8,7 +8,7 @@ import CountdownLogic from './CountdownLogic';
 import NewsletterSub from '../NewsletterSub/NewsletterSub.js';
 
 function Countdown() {
-  const { days, hours, minutes, seconds } = CountdownLogic();
+  const { days, hours, minutes, seconds, campaignRunning } = CountdownLogic();
   const { STATE_GREY } = Palette();
 
   const timerDescriptionProps = {
@@ -91,7 +91,7 @@ function Countdown() {
         }}
       >
         <Typography variant='body2' textAlign='center'>
-          Coming soon on
+          {campaignRunning ? 'Currently on' : 'Coming soon on'}
         </Typography>
         <Typography variant='body2'>
           <Box

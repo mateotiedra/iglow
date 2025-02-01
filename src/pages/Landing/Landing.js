@@ -2,7 +2,7 @@ import React from 'react';
 import Palette from '../../theme/palette';
 
 import { CONTACT_EMAIL } from '../../config/AppConfig';
-import jacketHero from '../../assets/images/jacket-hero.png';
+import jacketHero from '../../assets/videos/ilgow-loop.mp4';
 import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
 import trailer16x9 from '../../assets/videos/trailer/16x9.mp4';
@@ -18,7 +18,6 @@ import mountain from '../../assets/images/mountain.png';
 import { Box, Container, Typography } from '@mui/material';
 
 import Navbar from '../../components/Navbar/Navbar';
-import Countdown from '../../components/Countdown/Countdown';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
 import IllustratedParagraph from '../../components/IllustratedParagraph/IllustratedParagraph';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -51,7 +50,7 @@ function HeroSection() {
       sx={{
         position: 'relative',
         width: '100%',
-        backgroundColor: 'black',
+        backgroundColor: '#08080C',
       }}
     >
       <NoisyContainer>
@@ -78,7 +77,7 @@ function HeroSection() {
                 width: '100%',
                 position: 'absolute',
                 top: 0,
-                background: 'linear-gradient(180deg, black, transparent)',
+                background: 'linear-gradient(180deg, #08080C, transparent)',
               }}
             />
             <Box
@@ -113,7 +112,7 @@ function HeroSection() {
                 width: '100%',
                 position: 'relative',
                 top: '-100px',
-                background: 'linear-gradient(0deg, black, transparent)',
+                background: 'linear-gradient(0deg, #08080C, transparent)',
               }}
             />
           </Box>
@@ -153,7 +152,7 @@ function HeroSection() {
               technology and Swiss quality.
             </Typography>
           </Box>
-          <img
+          <video
             src={jacketHero}
             style={{
               width: '80vw',
@@ -164,11 +163,13 @@ function HeroSection() {
               left: '10px',
             }}
             alt='jacket'
+            autoPlay
+            loop
+            muted
+            playsInline
           />
-          <Countdown />
-          <EmptySpace />
           <Typography variant='h2' sx={{ textAlign: 'center' }}>
-            Lights, Cameras, Action !
+            Lights, Cameras, actions!
           </Typography>
           <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
             Unveiling the IGLOW® Smart Jacket
@@ -205,8 +206,8 @@ function WhatIsSection() {
         <EmptySpace />
         <SectionTitle
           overtitle='WHAT IS IGLOW ?'
-          title='Ride bright'
-          highlight='stay in sight'
+          title='Ride bright,'
+          highlight='stay in sight.'
         />
         <EmptySpace under='h2' />
         <IllustratedParagraph
@@ -245,7 +246,7 @@ function WhatIsSection() {
         <SectionTitle
           overtitle='Engineered in Switzerland'
           highlight='Swiss quality'
-          title='unmatched safety'
+          title='and unmatched safety.'
           reverse
         />
         <EmptySpace under='h2' />
@@ -352,7 +353,7 @@ function ContactSection() {
         <SectionTitle
           overtitle='F. A. Q.'
           title='Let us'
-          highlight='enlighten you !'
+          highlight='enlighten you!'
         />
         <EmptySpace under='h2' />
         <FAQSection />

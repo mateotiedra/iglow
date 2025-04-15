@@ -112,7 +112,7 @@ function Navbar({ admin, coverPage }) {
               }}
             />
           </Box>
-          <Typography
+          {/* <Typography
             variant='subtitle2'
             sx={{
               position: 'absolute',
@@ -133,7 +133,7 @@ function Navbar({ admin, coverPage }) {
               alt='kickstarter'
               style={{ height: '12px' }}
             />
-          </Typography>
+          </Typography> */}
 
           <Button variant='contained' component={HashLink} to='/#join'>
             Join Us

@@ -447,8 +447,25 @@ const Reserve = () => {
     const successUrl = `${baseUrl}/result?lang=${currentLang}&type=success`;
     const cancelUrl = `${baseUrl}/result?lang=${currentLang}&type=cancel`;
 
-    // Redirect to Stripe Checkout - same pattern as iglow.html
-    window.location.href = `https://buy.stripe.com/${priceId}?success_url=${encodeURIComponent(
+    // Map price IDs to Stripe Buy Button checkout URLs
+    const stripeCheckoutUrls = {
+      price_1SGkg7ClH97ISv2ltpMYi4DE:
+        'https://buy.stripe.com/6oUdR86eC78F04M3QlgQE02', // CHF
+      price_1SGkt9ClH97ISv2l2BPtn3ke:
+        'https://buy.stripe.com/8x29ASfPc64B2cUcmRgQE01', // EUR
+      price_1SGkweClH97ISv2lbwx0YlrE:
+        'https://buy.stripe.com/fZu00igTg9gN04Mfz3gQE00', // USD
+    };
+
+    const checkoutUrl = stripeCheckoutUrls[priceId];
+
+    if (!checkoutUrl) {
+      console.error('Invalid price ID:', priceId);
+      return;
+    }
+
+    // Redirect to Stripe Checkout with success and cancel URLs
+    window.location.href = `${checkoutUrl}?success_url=${encodeURIComponent(
       successUrl
     )}&cancel_url=${encodeURIComponent(cancelUrl)}`;
   };
@@ -542,6 +559,7 @@ const Reserve = () => {
             }}
           />
           <div
+            className='reserve-buttons-container'
             style={{
               textAlign: 'center',
               margin: '40px 0',

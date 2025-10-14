@@ -722,12 +722,72 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Language Switcher - Make it scrollable and compact on mobile */
+  .lang-switcher {
+    gap: 5px;
+    overflow-x: auto;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+  }
+
+  .lang-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    min-height: 42px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .flag-icon {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+
+  /* Hero Logo - Prevent truncation */
+  .hero-logo img {
+    max-width: 90% !important;
+    padding: 0 20px;
+  }
+
+  /* Hero section */
   .hero h1 {
     font-size: 32px;
   }
 
   .hero .tagline {
-    font-size: 16px;
+    font-size: 24px !important;
+  }
+
+  /* Reserve buttons container - Fix margin and layout */
+  .reserve-buttons-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 20px auto !important;
+    padding: 0 20px !important;
+    gap: 15px !important;
+    overflow-x: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Reserve buttons - Better mobile sizing */
+  .hero .btn {
+    padding: 18px 30px !important;
+    font-size: 20px !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    white-space: normal !important;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+
+  .flag-emoji {
+    font-size: 1.2em !important;
   }
 
   .banner-item {
@@ -757,5 +817,49 @@ footer a:hover {
     padding: 15px 30px;
     font-size: 16px;
     margin: 10px;
+  }
+
+  /* Container padding adjustment */
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .lang-switcher {
+    gap: 4px;
+    padding: 0 5px;
+  }
+
+  .lang-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-height: 38px;
+  }
+
+  .flag-icon {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
+  .hero-logo img {
+    max-width: 95% !important;
+    padding: 0 10px;
+  }
+
+  .reserve-buttons-container {
+    padding: 0 15px !important;
+    gap: 12px !important;
+  }
+
+  .hero .btn {
+    padding: 16px 25px !important;
+    font-size: 18px !important;
+    width: 100% !important;
+  }
+
+  .hero .tagline {
+    font-size: 20px !important;
   }
 }

@@ -1,0 +1,378 @@
+@import url('https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700&display=swap');
+
+.result-page {
+  font-family: 'Chillax', -apple-system, sans-serif;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-header {
+  background: #000;
+  border-bottom: 3px solid #e30613;
+  padding: 15px 0;
+}
+
+.result-header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.result-logo {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+.result-section {
+  flex: 1;
+  background: #000;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.result-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.result-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.success-title {
+  color: #28a745;
+}
+
+.result-highlight {
+  color: #e30613;
+  font-weight: 700;
+}
+
+.result-message {
+  font-size: 24px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.result-details {
+  background: rgba(227, 6, 19, 0.1);
+  border: 2px solid #e30613;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.result-details h3 {
+  font-size: 32px;
+  color: #e30613;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.result-details li {
+  margin: 10px 0;
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.result-details li::before {
+  content: '✓';
+  color: #28a745;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.info-details h3 {
+  color: #28a745;
+}
+
+.info-details li::before {
+  content: '•';
+  color: #28a745;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.result-check {
+  color: #28a745;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.result-actions {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid;
+  cursor: pointer;
+  min-width: 230px;
+}
+
+.btn-primary {
+  background: #e30613;
+  color: #fff;
+  border-color: #e30613;
+}
+
+.btn-primary:hover {
+  background: #a00409;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(227, 6, 19, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.swiss-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.swiss-flag {
+  width: 40px;
+  height: 40px;
+  background: #e30613;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(227, 6, 19, 0.3);
+}
+
+.swiss-flag::before,
+.swiss-flag::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+}
+
+.swiss-flag::before {
+  width: 24px;
+  height: 6px;
+}
+
+.swiss-flag::after {
+  width: 6px;
+  height: 24px;
+}
+
+.result-icon {
+  font-size: 120px;
+  margin: 40px 0;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.result-observatory {
+  font-size: 60px;
+  margin: 30px 0;
+}
+
+.result-footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 3px solid #e30613;
+}
+
+.result-footer p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.result-footer a {
+  color: #e30613;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.result-footer a:hover {
+  color: #ff3333;
+}
+
+.result-price-currency {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.result-price-current {
+  color: #e30613;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.result-price-original {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05em;
+  position: relative;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+.result-price-original::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    #e30613 40%,
+    #e30613 60%,
+    transparent 90%
+  );
+  transform: rotate(-15deg);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+[dir='rtl'] .result-details {
+  text-align: right;
+}
+
+[dir='rtl'] .result-details li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+[dir='rtl'] .result-details li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir='rtl'] .result-actions {
+  justify-content: center;
+}
+
+[dir='rtl'] .result-footer {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .result-title {
+    font-size: 32px;
+  }
+
+  .result-message {
+    font-size: 18px;
+  }
+
+  .result-details {
+    padding: 30px;
+    margin: 30px 10px;
+  }
+
+  .result-details h3 {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    min-width: 200px;
+  }
+
+  .result-icon {
+    font-size: 80px;
+  }
+
+  .swiss-badge {
+    font-size: 20px;
+  }
+
+  .result-footer p {
+    font-size: 16px;
+  }
+}

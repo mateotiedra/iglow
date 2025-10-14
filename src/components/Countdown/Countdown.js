@@ -1,11 +1,13 @@
 import Palette from '../../theme/palette.js';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import indiegogo from '../../assets/logos/indiegogo-color.svg';
 import kickstarter from '../../assets/logos/kickstarter-color.svg';
+import smartJacket from '../../assets/images/smart-jacket.png';
 
 import CountdownLogic from './CountdownLogic';
 import NewsletterSub from '../NewsletterSub/NewsletterSub.js';
+import NoisyContainer from '../NoisyContainer/NoisyContainer.js';
 
 function Countdown() {
   const { days, hours, minutes, seconds, campaignRunning } = CountdownLogic();

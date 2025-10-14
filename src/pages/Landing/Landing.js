@@ -15,7 +15,7 @@ import controller from '../../assets/images/controller.png';
 import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
 
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, Button } from '@mui/material';
 
 import Navbar from '../../components/Navbar/Navbar';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
@@ -28,6 +28,7 @@ import FAQSection from '../../components/FAQSection/FAQSection';
 import FormContact from '../../components/FormContact/FormContact';
 import Footer from '../../components/Footer/Footer';
 import NoisyContainer from '../../components/NoisyContainer/NoisyContainer';
+import Countdown from '../../components/Countdown/Countdown';
 
 function Landing() {
   return (
@@ -152,6 +153,7 @@ function HeroSection() {
               technology and Swiss quality.
             </Typography>
           </Box>
+          {/*
           <video
             src={jacketHero}
             style={{
@@ -173,8 +175,10 @@ function HeroSection() {
           </Typography>
           <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
             Unveiling the IGLOW® Smart Jacket
-          </Typography>
+          </Typography> */}
           <EmptySpace under='h2' />
+          <CountdownSection />
+
           <video
             controls
             style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
@@ -415,6 +419,137 @@ function ContactSection() {
       </Container>
       <EmptySpace />
     </Box>
+  );
+}
+
+function CountdownSection() {
+  const { PRIMARY, STATE_GREY } = Palette();
+
+  return (
+    <NoisyContainer>
+      <Container
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          py: 8,
+        }}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+            maxWidth: '770px',
+            mb: 4,
+          }}
+        >
+          <Box
+            component='img'
+            src={smartJacket}
+            alt='IGLOW Smart Jacket'
+            sx={{
+              width: '100%',
+              maxWidth: '400px',
+              my: 4,
+            }}
+          />
+        </Box>
+
+        <Typography variant='body1' sx={{ mb: 1 }}>
+          <Typography component='span' fontWeight='bold'>
+            Launching
+          </Typography>{' '}
+          <Typography component='span' color='primary' fontWeight='bold'>
+            November 18th
+          </Typography>
+          <Typography component='span' fontWeight='bold'>
+            , 2025 on
+          </Typography>{' '}
+          <Typography
+            component='span'
+            sx={{ color: '#05CE78', fontWeight: 'bold' }}
+          >
+            KICKSTARTER
+          </Typography>
+        </Typography>
+
+        <Countdown />
+
+        <Button
+          variant='contained'
+          color='primary'
+          href='/reserve'
+          sx={{
+            mt: 4,
+            mb: 4,
+            px: 4,
+            py: 1.5,
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            textTransform: 'none',
+            borderRadius: '50px',
+          }}
+        >
+          📋 click here to reserve now
+        </Button>
+
+        <Box
+          sx={{
+            textAlign: 'center',
+            mb: 4,
+            maxWidth: '600px',
+          }}
+        >
+          <Typography variant='body1' sx={{ mb: 1 }}>
+            <Typography
+              component='span'
+              sx={{ color: PRIMARY, fontWeight: 'bold' }}
+            >
+              Reserve NOW
+            </Typography>{' '}
+            <Typography component='span'>
+              your Smart Bike Jacket iGLOW
+            </Typography>
+          </Typography>
+          <Typography variant='body1' sx={{ mb: 1 }}>
+            <Typography component='span'>for only </Typography>
+            <Typography
+              component='span'
+              sx={{ color: PRIMARY, fontWeight: 'bold', fontSize: '1.2rem' }}
+            >
+              4 CHF / 1 EUR / 1 USD
+            </Typography>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{ color: '#FFA500', fontWeight: 'bold', mb: 1 }}
+          >
+            Super Early Bird at CHF 155.-
+          </Typography>
+          <Typography variant='body2' color={STATE_GREY}>
+            instead of CHF 259.- Save CHF{' '}
+            <Typography
+              component='span'
+              sx={{ color: PRIMARY, fontWeight: 'bold' }}
+            >
+              104.-
+            </Typography>
+          </Typography>
+        </Box>
+
+        <Typography
+          variant='body1'
+          sx={{ color: '#00FF00', fontWeight: 'bold', mb: 1 }}
+        >
+          Click below to reserve and be part of the success.
+        </Typography>
+        <Typography variant='body1' fontWeight='bold'>
+          Secure your spot today!
+        </Typography>
+      </Container>
+    </NoisyContainer>
   );
 }
 

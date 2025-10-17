@@ -654,9 +654,16 @@ const Reserve = () => {
               <div key={index} className='benefit'>
                 <div className='benefit-icon'>{renderIglowIcon()}</div>
                 <h3>{benefit.title}</h3>
-                <p
-                  dangerouslySetInnerHTML={{ __html: benefit.description }}
-                ></p>
+                {benefit.description.includes('Super Early Bird at CHF 155.-') ? (
+                  <p
+                    style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
+                    dangerouslySetInnerHTML={{ __html: benefit.description }}
+                  ></p>
+                ) : (
+                  <p
+                    dangerouslySetInnerHTML={{ __html: benefit.description }}
+                  ></p>
+                )}
               </div>
             ))}
           </div>

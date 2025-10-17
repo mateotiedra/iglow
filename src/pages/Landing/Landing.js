@@ -2,12 +2,12 @@ import React from 'react';
 import Palette from '../../theme/palette';
 
 import { CONTACT_EMAIL } from '../../config/AppConfig';
-// import jacketHero from '../../assets/videos/ilgow-loop.mp4';
+import jacketHero from '../../assets/videos/ilgow-loop.mp4';
 import schoeller from '../../assets/images/partners/schoeller.png';
 import systronic from '../../assets/images/partners/systronic.png';
-// import trailer16x9 from '../../assets/videos/trailer/16x9.mp4';
-// import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
-// import topspot16x9 from '../../assets/videos/topspot/16x9.mp4';
+import trailer16x9 from '../../assets/videos/trailer/16x9.mp4';
+import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
+import topspot16x9 from '../../assets/videos/topspot/16x9.mp4';
 import trailerThumbnail from '../../assets/images/trailer-thumbnail.png';
 import subtractShape from '../../assets/images/subtract.png';
 import smartJacket from '../../assets/images/smart-jacket.png';
@@ -82,7 +82,7 @@ function HeroSection() {
               }}
             />
             {/* Vidéos temporairement désactivées - fichiers manquants */}
-            {/* <Box
+            <Box
               component='video'
               src={topspot1x1}
               sx={{
@@ -107,7 +107,7 @@ function HeroSection() {
               loop
               muted
               playsInline
-            /> */}
+            />
             <Box
               sx={{
                 height: '100px',
@@ -148,24 +148,7 @@ function HeroSection() {
             </Typography>
             <EmptySpace under='h1' />
           </Box>
-          {/*
-          <video
-            src={jacketHero}
-            style={{
-              width: '80vw',
-              maxWidth: '600px',
-              marginTop: '60px',
-              marginBottom: '40px',
-              position: 'relative',
-              left: '10px',
-            }}
-            alt='jacket'
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <Typography variant='h2' sx={{ textAlign: 'center' }}>
+          {/* <Typography variant='h2' sx={{ textAlign: 'center' }}>
             Lights, Cameras, actions!
           </Typography>
           <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
@@ -199,7 +182,7 @@ function HeroSection() {
               zIndex: 10,
             }}
           >
-            click here to reserve now
+            Click here to reserve now
           </Button>
         </Container>
       </NoisyContainer>
@@ -226,42 +209,87 @@ function WhatIsSection() {
           <Typography variant='h6' sx={{ color: STATE_GREY, mb: 2 }}>
             WHAT IS IGLOW ?
           </Typography>
-          <Typography variant='h1' component='div' sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}>
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+          <Typography
+            variant='h1'
+            component='div'
+            sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}
+          >
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               The Smart Bike Jacket IGLOW is
             </Typography>
           </Typography>
-          <Typography variant='h1' component='div' sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}>
-            <Typography component='span' sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}>
+          <Typography
+            variant='h1'
+            component='div'
+            sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}
+          >
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               360° visibility
             </Typography>{' '}
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               with
             </Typography>{' '}
-            <Typography component='span' sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               turn signals
             </Typography>{' '}
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               and
             </Typography>{' '}
-            <Typography component='span' sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               brake lights
             </Typography>{' '}
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               like a car,
             </Typography>
           </Typography>
-          <Typography variant='h1' component='div' sx={{ fontSize: { xs: '2rem', md: '3rem' } }}>
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+          <Typography
+            variant='h1'
+            component='div'
+            sx={{ fontSize: { xs: '2rem', md: '3rem' } }}
+          >
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               controlled by
             </Typography>{' '}
-            <Typography component='span' sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               intelligent
             </Typography>{' '}
-            <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               Bluetooth
             </Typography>{' '}
-            <Typography component='span' sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}>
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 'bold', fontSize: 'inherit' }}
+            >
               remote
             </Typography>
           </Typography>
@@ -503,53 +531,45 @@ function CountdownSection() {
           }}
         >
           {/* Texte au-dessus de la vidéo */}
-          <Typography 
-            variant='h3' 
-            sx={{ 
-              color: 'white', 
-              mb: 1, 
+          <Typography
+            variant='h3'
+            sx={{
+              color: 'white',
+              mb: 1,
               textAlign: 'center',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
             }}
           >
             Watch NOW – To be visible like a car
           </Typography>
-          <Typography 
-            variant='h4' 
-            sx={{ 
-              color: 'white', 
-              mb: 3, 
+          <Typography
+            variant='h4'
+            sx={{
+              color: 'white',
+              mb: 3,
               textAlign: 'center',
-              fontWeight: 'normal'
+              fontWeight: 'normal',
             }}
           >
             The Smart Jacket with Turn signals + Brake lights
           </Typography>
-          
+
           {/* Placeholder pour la vidéo trailer */}
-          <Box
-            sx={{
-              width: '100%',
-              maxWidth: '800px',
-              height: '500px',
-              border: '3px dashed #DC0028',
-              borderRadius: '30px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(220, 0, 40, 0.1)',
-              zIndex: 2,
-              margin: '0 auto',
-            }}
+          <video
+            controls
+            style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
+            poster={trailerThumbnail}
           >
-            <Typography variant='h3' sx={{ color: '#DC0028' }}>
-              VIDEO PLACEHOLDER
-            </Typography>
-          </Box>
+            <source src={trailer16x9} />
+          </video>
         </Box>
 
         <Typography variant='body1' sx={{ mb: 4 }}>
-          <Typography component='span' fontWeight='bold' sx={{ fontSize: '1.5em' }}>
+          <Typography
+            component='span'
+            fontWeight='bold'
+            sx={{ fontSize: '1.5em' }}
+          >
             Launching
           </Typography>{' '}
           <Typography
@@ -558,7 +578,11 @@ function CountdownSection() {
           >
             November 18th
           </Typography>
-          <Typography component='span' fontWeight='bold' sx={{ fontSize: '1.5em' }}>
+          <Typography
+            component='span'
+            fontWeight='bold'
+            sx={{ fontSize: '1.5em' }}
+          >
             , 2025 on
           </Typography>{' '}
           <Typography
@@ -593,9 +617,36 @@ function CountdownSection() {
             minWidth: '400px',
           }}
         >
-           click here to reserve now
+          Click here to reserve now
         </Button>
-
+        <Button
+          variant='contained'
+          color='primary'
+          href='/reserve'
+          sx={{
+            mt: 5,
+            mb: 2,
+            px: 12,
+            py: 4,
+            fontSize: '2.2rem',
+            fontWeight: 'bold',
+            textTransform: 'none',
+            borderRadius: '70px',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
+              backgroundColor: '#05CE78',
+            },
+            transition: 'all 0.3s ease',
+            minWidth: '400px',
+            position: 'relative',
+            zIndex: 10,
+            backgroundColor: '#05CE78',
+          }}
+        >
+          Go on Kickstarter
+        </Button>
         <Box
           sx={{
             textAlign: 'center',
@@ -684,19 +735,23 @@ function CountdownSection() {
         <Typography variant='body1' fontWeight='bold' sx={{ mb: 3 }}>
           Secure your spot today!
         </Typography>
-        
+
         {/* GIF du gilet - Remonté ici */}
-        <img
-          src={smartJacket}
-          alt='IGLOW Smart Jacket'
+        <video
+          src={jacketHero}
           style={{
-            width: '100%',
-            maxWidth: '400px',
-            margin: '0 auto',
-            display: 'block',
+            width: '70vw',
+            maxWidth: '500px',
+            marginTop: '60px',
+            marginBottom: '40px',
             position: 'relative',
-            zIndex: 100,
+            left: '10px',
           }}
+          alt='jacket'
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       </Container>
     </NoisyContainer>

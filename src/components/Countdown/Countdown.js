@@ -6,7 +6,6 @@ import kickstarter from '../../assets/logos/kickstarter-color.svg';
 import smartJacket from '../../assets/images/smart-jacket.png';
 
 import CountdownLogic from './CountdownLogic';
-import NewsletterSub from '../NewsletterSub/NewsletterSub.js';
 import NoisyContainer from '../NoisyContainer/NoisyContainer.js';
 
 function Countdown() {
@@ -32,17 +31,6 @@ function Countdown() {
         maxWidth: '600px',
       }}
     >
-      <Typography textAlign='center'>
-        <Typography
-          variant='h2'
-          sx={{ textAlign: 'center', mb: 'minutes(50px,, 30vw)' }}
-        >
-          Get ready to grab your{' '}
-        </Typography>
-        <Typography component='span' variant='h2' color='primary'>
-          IGLOW® Smart Jacket
-        </Typography>
-      </Typography>
       <Box
         sx={{
           display: 'flex',
@@ -82,36 +70,6 @@ function Countdown() {
           </Typography>
         </Box>
       </Box>
-
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          alignItems: { xs: 'center', sm: 'baseline' },
-          gap: '8px',
-          marginBottom: '30px',
-        }}
-      >
-        <Typography variant='body2' textAlign='center'>
-          {campaignRunning ? 'Currently on' : 'Coming soon on'}
-        </Typography>
-        <Typography variant='body2'>
-          <Box
-            component='img'
-            src={indiegogo}
-            alt='indiegogo'
-            sx={logosStyle}
-          />
-          &nbsp; & &nbsp;
-          <Box
-            component='img'
-            src={kickstarter}
-            alt='kickstarter'
-            sx={logosStyle}
-          />
-        </Typography>
-      </Box>
-      <NewsletterSub />
     </Box>
   );
 }

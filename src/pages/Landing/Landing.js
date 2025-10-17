@@ -143,14 +143,10 @@ function HeroSection() {
             <Typography variant='h1'>
               Get ready to grab your{' '}
               <Typography component='span' variant='h1' color='primary'>
-                IGLOW® Smart Jacket
+                IGLOW® Smart Bike Jacket
               </Typography>
             </Typography>
             <EmptySpace under='h1' />
-            <Typography variant='body1' color={STATE_GREY}>
-              The world's first smart jacket – the ultimate fusion of style,
-              technology and Swiss quality.
-            </Typography>
           </Box>
           {/*
           <video
@@ -173,40 +169,12 @@ function HeroSection() {
             Lights, Cameras, actions!
           </Typography>
           <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
-            Unveiling the IGLOW® Smart Jacket
+            Unveiling the IGLOW® Smart Bike Jacket
           </Typography> */}
           <EmptySpace under='h2' />
           <CountdownSection />
 
-          {/* Vidéo trailer temporairement désactivée - fichier manquant */}
-          {/* <video
-            controls
-            style={{ width: '100%', borderRadius: 30, zIndex: '2' }}
-            poster={trailerThumbnail}
-          >
-            <source src={trailer16x9} />
-          </video> */}
-          
-          {/* Placeholder pour voir l'emplacement de la vidéo */}
-          <Box
-            sx={{
-              width: '100%',
-              height: '400px',
-              border: '3px dashed #DC0028',
-              borderRadius: '30px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(220, 0, 40, 0.1)',
-              zIndex: 2,
-            }}
-          >
-            <Typography variant='h3' sx={{ color: '#DC0028' }}>
-              VIDEO PLACEHOLDER
-            </Typography>
-          </Box>
-
-          {/* Bouton après la vidéo */}
+          {/* Bouton après le GIF */}
           <Button
             variant='contained'
             color='primary'
@@ -260,7 +228,7 @@ function WhatIsSection() {
           </Typography>
           <Typography variant='h1' component='div' sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}>
             <Typography component='span' sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}>
-              The Smart Jacket IGLOW is
+              The Smart Bike Jacket IGLOW is
             </Typography>
           </Typography>
           <Typography variant='h1' component='div' sx={{ fontSize: { xs: '2rem', md: '3rem' }, mb: 1 }}>
@@ -522,6 +490,7 @@ function CountdownSection() {
           overflow: 'visible',
         }}
       >
+        {/* Vidéo trailer - Interverti avec le GIF du gilet */}
         <Box
           sx={{
             display: 'flex',
@@ -530,18 +499,53 @@ function CountdownSection() {
             textAlign: 'center',
             maxWidth: '770px',
             mb: 4,
+            width: '100%',
           }}
         >
+          {/* Texte au-dessus de la vidéo */}
+          <Typography 
+            variant='h3' 
+            sx={{ 
+              color: 'white', 
+              mb: 1, 
+              textAlign: 'center',
+              fontWeight: 'bold'
+            }}
+          >
+            Watch NOW – To be visible like a car
+          </Typography>
+          <Typography 
+            variant='h4' 
+            sx={{ 
+              color: 'white', 
+              mb: 3, 
+              textAlign: 'center',
+              fontWeight: 'normal'
+            }}
+          >
+            The Smart Jacket with Turn signals + Brake lights
+          </Typography>
+          
+          {/* Placeholder pour la vidéo trailer */}
           <Box
-            component='img'
-            src={smartJacket}
-            alt='IGLOW Smart Jacket'
             sx={{
               width: '100%',
-              maxWidth: '400px',
-              my: 4,
+              maxWidth: '800px',
+              height: '500px',
+              border: '3px dashed #DC0028',
+              borderRadius: '30px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(220, 0, 40, 0.1)',
+              zIndex: 2,
+              margin: '0 auto',
             }}
-          />
+          >
+            <Typography variant='h3' sx={{ color: '#DC0028' }}>
+              VIDEO PLACEHOLDER
+            </Typography>
+          </Box>
         </Box>
 
         <Typography variant='body1' sx={{ mb: 4 }}>
@@ -677,9 +681,23 @@ function CountdownSection() {
         >
           Click to reserve and be part of the success.
         </Typography>
-        <Typography variant='body1' fontWeight='bold' sx={{ mb: 8 }}>
+        <Typography variant='body1' fontWeight='bold' sx={{ mb: 3 }}>
           Secure your spot today!
         </Typography>
+        
+        {/* GIF du gilet - Remonté ici */}
+        <img
+          src={smartJacket}
+          alt='IGLOW Smart Jacket'
+          style={{
+            width: '100%',
+            maxWidth: '400px',
+            margin: '0 auto',
+            display: 'block',
+            position: 'relative',
+            zIndex: 100,
+          }}
+        />
       </Container>
     </NoisyContainer>
   );

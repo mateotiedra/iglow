@@ -635,7 +635,7 @@ const Reserve = () => {
             </a>
             {' & '}
             <a
-              href='https://kickstarter.com'
+              href='https://www.kickstarter.com/projects/iglowswiss/iglow-the-smart-bike-jacket-be-seen-be-safe'
               target='_blank'
               rel='noopener noreferrer'
               className='platform kickstarter-green'
@@ -672,7 +672,9 @@ const Reserve = () => {
               <div key={index} className='benefit'>
                 <div className='benefit-icon'>{renderIglowIcon()}</div>
                 <h3>{benefit.title}</h3>
-                {benefit.description.includes('Super Early Bird at CHF 155.-') ? (
+                {benefit.description.includes(
+                  'Super Early Bird at CHF 155.-'
+                ) ? (
                   <p
                     style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
                     dangerouslySetInnerHTML={{ __html: benefit.description }}

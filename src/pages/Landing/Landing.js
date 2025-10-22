@@ -622,7 +622,8 @@ function CountdownSection() {
         <Button
           variant='contained'
           color='primary'
-          href='/reserve'
+          href='https://www.kickstarter.com/projects/iglowswiss/iglow-the-smart-bike-jacket-be-seen-be-safe'
+          target='_blank'
           sx={{
             mt: 5,
             mb: 2,

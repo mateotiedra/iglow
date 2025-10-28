@@ -57,7 +57,7 @@ function NewsletterSub() {
     const emailPayload = {
       sender: { name: 'Iglow', email: SENDER_EMAIL },
       to: [{ email: data.email }],
-      subject: 'Get Ready to Discover the IGLOW Smart Jacket!',
+      subject: 'Get Ready to Discover the IGLOW Smart Vest!',
       htmlContent: `<body>
     <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
@@ -65,19 +65,19 @@ function NewsletterSub() {
                 <table width="600" cellpadding="0" cellspacing="0">
                     <tr>
                         <td>
-                            <h1>Get Ready to Discover the IGLOW Smart Jacket!</h1>
+                            <h1>Get Ready to Discover the IGLOW Smart Vest!</h1>
                             <p>Dear Future Backers,</p>
-                            <p>Thank you for signing up to be notified about the launch of the world’s first reflective smart jacket with integrated brake lights and turn signals! 🎉</p>
-                            <p>We’re thrilled to let you know that our Indiegogo campaign is just around the corner! As a future backer, you’ll be among the first to know when sales go live and have the chance to reserve your IGLOW Smart Jacket at an exclusive price. 🚀</p>
+                            <p>Thank you for signing up to be notified about the launch of the world’s first reflective smart vest with integrated brake lights and turn signals! 🎉</p>
+                            <p>We’re thrilled to let you know that our Indiegogo campaign is just around the corner! As a future backer, you’ll be among the first to know when sales go live and have the chance to reserve your IGLOW Smart Vest at an exclusive price. 🚀</p>
                             
                             <h2>What can you expect?</h2>
                             <ul>
                                 <li>A special offer reserved just for you, our early supporters.</li>
-                                <li>A jacket that will revolutionize your safety on the road with Swiss precision technology.</li>
+                                <li>A vest that will revolutionize your safety on the road with Swiss precision technology.</li>
                                 <li>Discounts of up to 53% during the campaign.</li>
                             </ul>
                             
-                            <p>Stay tuned! We’ll be sending you an email soon with all the details on how to access the campaign and secure your IGLOW jacket.</p>
+                            <p>Stay tuned! We’ll be sending you an email soon with all the details on how to access the campaign and secure your IGLOW vest.</p>
                             
                             <p>Thank you for your interest and for joining us on this exciting journey!</p>
                             

@@ -143,7 +143,7 @@ function HeroSection() {
             <Typography variant='h1'>
               Get ready to grab your{' '}
               <Typography component='span' variant='h1' color='primary'>
-                IGLOW® Smart Bike Jacket
+                IGLOW® Smart Bike Vest
               </Typography>
             </Typography>
             <EmptySpace under='h1' />
@@ -152,47 +152,40 @@ function HeroSection() {
             Lights, Cameras, actions!
           </Typography>
           <Typography variant='h2' color='primary' sx={{ textAlign: 'center' }}>
-            Unveiling the IGLOW® Smart Bike Jacket
+            Unveiling the IGLOW® Smart Bike Vest
           </Typography> */}
           <EmptySpace under='h2' />
-          <CountdownSection />
 
+          <CountdownSection />
           {/* Bouton après le GIF */}
           <Button
             variant='contained'
             color='primary'
             href='/reserve'
-            sx={{
-              mt: 5,
-              mb: 2,
-              px: 12,
-              py: 4,
-              fontSize: '2.2rem',
-              fontWeight: 'bold',
-              textTransform: 'none',
-              borderRadius: '70px',
-              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
-              '&:hover': {
-                transform: 'scale(1.05)',
-                boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
-              },
-              transition: 'all 0.3s ease',
-              minWidth: '400px',
-              position: 'relative',
-              zIndex: 10,
-            }}
+            size='large'
+            sx={{ marginBottom: 10 }}
           >
             Click here to reserve now
           </Button>
         </Container>
+        <img
+          src={subtractShape}
+          style={{
+            width: '100%',
+            zIndex: 1,
+            opacity: 0,
+          }}
+          alt='substract shape'
+        />
       </NoisyContainer>
+
       <img
         src={subtractShape}
         style={{
           position: 'absolute',
           bottom: '0',
           width: '100%',
-          zIndex: '1',
+          zIndex: 1,
         }}
         alt='substract shape'
       />
@@ -218,7 +211,7 @@ function WhatIsSection() {
               component='span'
               sx={{ color: NIGHT, fontWeight: 'bold', fontSize: 'inherit' }}
             >
-              The Smart Bike Jacket IGLOW is
+              The Smart Bike Vest IGLOW is
             </Typography>
           </Typography>
           <Typography
@@ -297,7 +290,7 @@ function WhatIsSection() {
         <EmptySpace under='h2' />
         <IllustratedParagraph
           overtitle='safety'
-          title='High Visibility Smart Jacket'
+          title='High Visibility Smart Vest'
           text='Featuring state-of-the-art LED indicators, the vest offers improved visibility, particularly in low-light conditions. Its streamlined and ergonomic design guarantees both comfort and user-friendliness, even when you carry a backpack.'
           imgSrc={smartJacket}
         />
@@ -313,7 +306,7 @@ function WhatIsSection() {
         <IllustratedParagraph
           overtitle='APPLICATION'
           title='GlowSafe: Your Road Safety Companion'
-          text="GlowSafe is your go-to mobile app for searching routes and synchronizing Smart Jacket's indicators. Effortlessly find your way and seamlessly control the vest's blinkers for enhanced visibility."
+          text="GlowSafe is your go-to mobile app for searching routes and synchronizing Smart Vest's indicators. Effortlessly find your way and seamlessly control the vest's blinkers for enhanced visibility."
           imgSrc={appMockup}
         />
       </Container>
@@ -352,7 +345,7 @@ function WhatIsSection() {
         </Box>
         <EmptySpace under='h2' />
         <Typography color={STATE_GREY} textAlign='center'>
-          The Smart Jacket is the culmination of over 3 years of Swiss research
+          The Smart Vest is the culmination of over 3 years of Swiss research
           and engineering. We are dedicated to offering our customers
           unparalleled quality and adherence to safety standards. All electronic
           components and intelligent technical fabrics are entirely developed by
@@ -382,10 +375,10 @@ function SocialSection() {
         <PiQuotesFill color={RED} size={70} style={{ marginBottom: '20px' }} />
         <Typography color={STATE_GREY} textAlign='center'>
           IGLOW® captures the interest of the cycling community with the launch
-          of its Smart Jacket, a high-visibility vest made in Switzerland and
+          of its Smart Vest, a high-visibility vest made in Switzerland and
           designed to improve road safety. An ambitious global crowdfunding
           campaign is currently underway on Kickstarter and Indiegogo. With a
-          dual focus on safety and style, the Smart Jacket IGLOW emerges as a
+          dual focus on safety and style, the Smart Vest IGLOW emerges as a
           pioneering extension of the cycling gear market, inviting cyclists to
           protect themselves against the daily perils of the road.
         </Typography>
@@ -538,6 +531,7 @@ function CountdownSection() {
               mb: 1,
               textAlign: 'center',
               fontWeight: 'bold',
+              zIndex: 10,
             }}
           >
             Watch NOW – To be visible like a car
@@ -549,9 +543,10 @@ function CountdownSection() {
               mb: 3,
               textAlign: 'center',
               fontWeight: 'normal',
+              zIndex: 10,
             }}
           >
-            The Smart Jacket with Turn signals + Brake lights
+            The Smart Vest with Turn signals + Brake lights
           </Typography>
 
           {/* Placeholder pour la vidéo trailer */}
@@ -599,22 +594,9 @@ function CountdownSection() {
           variant='contained'
           color='primary'
           href='/reserve'
+          size='large'
           sx={{
-            mt: 5,
-            mb: 5,
-            px: 12,
-            py: 4,
-            fontSize: '2.2rem',
-            fontWeight: 'bold',
-            textTransform: 'none',
-            borderRadius: '70px',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
-            '&:hover': {
-              transform: 'scale(1.05)',
-              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
-            },
-            transition: 'all 0.3s ease',
-            minWidth: '400px',
+            marginY: 3,
           }}
         >
           Click here to reserve now
@@ -622,28 +604,15 @@ function CountdownSection() {
         <Button
           variant='contained'
           color='primary'
+          size='large'
           href='https://www.kickstarter.com/projects/iglowswiss/iglow-the-smart-bike-jacket-be-seen-be-safe'
           target='_blank'
           sx={{
-            mt: 5,
-            mb: 2,
-            px: 12,
-            py: 4,
-            fontSize: '2.2rem',
-            fontWeight: 'bold',
-            textTransform: 'none',
-            borderRadius: '70px',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
             '&:hover': {
-              transform: 'scale(1.05)',
-              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
               backgroundColor: '#05CE78',
             },
-            transition: 'all 0.3s ease',
-            minWidth: '400px',
-            position: 'relative',
-            zIndex: 10,
             backgroundColor: '#05CE78',
+            marginBottom: 3,
           }}
         >
           Go on Kickstarter
@@ -667,7 +636,7 @@ function CountdownSection() {
               Reserve NOW
             </Typography>{' '}
             <Typography component='span' sx={{ color: 'white' }}>
-              your Smart Bike Jacket iGLOW
+              your Smart Bike Vest iGLOW
             </Typography>
           </Typography>
           <Typography variant='body1' sx={{ mb: 1 }}>

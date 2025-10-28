@@ -9,7 +9,7 @@ const Reserve = () => {
   const content = {
     fr: {
       tagline: "RÉSERVEZ DÈS AUJOURD'HUI VOTRE",
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -34,7 +34,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: 'LE 18 NOVEMBRE 2025',
       launchText: 'Ouverture des ventes',
       socialProof: 'cyclistes ont déjà réservé leur gilet IGLOW',
@@ -56,7 +56,7 @@ const Reserve = () => {
     },
     en: {
       tagline: 'RESERVE YOUR',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -81,10 +81,10 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: 'NOVEMBER 18, 2025',
       launchText: 'Sales Opening',
-      socialProof: 'cyclists have already reserved their IGLOW jacket',
+      socialProof: 'cyclists have already reserved their IGLOW vest',
       benefits: [
         {
           title: 'Priority Access',
@@ -96,13 +96,13 @@ const Reserve = () => {
         },
         {
           title: 'Priority Delivery',
-          description: 'Be among the first to receive your IGLOW jacket',
+          description: 'Be among the first to receive your IGLOW vest',
         },
       ],
     },
     de: {
       tagline: 'RESERVIEREN SIE JETZT IHRE',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -127,7 +127,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18. NOVEMBER 2025',
       launchText: 'Verkaufsstart',
       socialProof: 'Radfahrer haben bereits ihre IGLOW-Jacke reserviert',
@@ -149,7 +149,7 @@ const Reserve = () => {
     },
     es: {
       tagline: 'RESERVE HOY SU',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -174,7 +174,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 DE NOVIEMBRE DE 2025',
       launchText: 'Apertura de ventas',
       socialProof: 'ciclistas ya han reservado su chaqueta IGLOW',
@@ -195,7 +195,7 @@ const Reserve = () => {
     },
     nl: {
       tagline: 'RESERVEER NU UW',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -220,7 +220,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 NOVEMBER 2025',
       launchText: 'Verkoop opening',
       socialProof: 'fietsers hebben al hun IGLOW-jas gereserveerd',
@@ -243,7 +243,7 @@ const Reserve = () => {
     },
     pt: {
       tagline: 'RESERVE HOJE SUA',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -268,7 +268,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 DE NOVEMBRO DE 2025',
       launchText: 'Abertura de vendas',
       socialProof: 'ciclistas já reservaram sua jaqueta IGLOW',
@@ -290,7 +290,7 @@ const Reserve = () => {
     },
     hi: {
       tagline: 'आज ही अपना रिजर्व करें',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -315,7 +315,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 नवंबर 2025',
       launchText: 'बिक्री शुरुआत',
       socialProof: 'साइकिल चालकों ने पहले ही अपनी IGLOW जैकेट आरक्षित कर ली है',
@@ -337,7 +337,7 @@ const Reserve = () => {
     },
     ar: {
       tagline: 'احجز اليوم',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -362,7 +362,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 نوفمبر 2025',
       launchText: 'افتتاح المبيعات',
       socialProof: 'راكبي الدراجات قد حجزوا بالفعل سترة IGLOW الخاصة بهم',
@@ -383,7 +383,7 @@ const Reserve = () => {
     },
     ru: {
       tagline: 'ЗАБРОНИРУЙТЕ СЕГОДНЯ',
-      title: 'Smart Bike Jacket',
+      title: 'Smart Bike Vest',
       highlight: 'IGLOW',
       reserveButtons: [
         {
@@ -408,7 +408,7 @@ const Reserve = () => {
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
-      swissBadge: 'SWISS MADE SMART JACKET',
+      swissBadge: 'SWISS MADE SMART VEST',
       launchDate: '18 НОЯБРЯ 2025',
       launchText: 'Начало продаж',
       socialProof: 'велосипедистов уже забронировали свою куртку IGLOW',
@@ -548,7 +548,7 @@ const Reserve = () => {
           </h1>
           <img
             src='https://i.imgur.com/H7slDFY.gif'
-            alt='iGlow Smart Jacket'
+            alt='iGlow Smart Vest'
             className='vest-image'
             style={{
               display: 'block',

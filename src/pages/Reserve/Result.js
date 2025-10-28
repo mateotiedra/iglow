@@ -46,7 +46,7 @@ const Result = () => {
     fr: {
       title: 'Félicitations !',
       message:
-        'Votre réservation pour le <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> a été confirmée avec succès ! Bienvenue dans l\'aventure de la mobilité intelligente.',
+        'Votre réservation pour le <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> a été confirmée avec succès ! Bienvenue dans l\'aventure de la mobilité intelligente.',
       confirmedTitle: 'RÉSERVATION CONFIRMÉE',
       confirmedItems: [
         'Paiement de 1.- traité avec succès',
@@ -69,7 +69,7 @@ const Result = () => {
     en: {
       title: 'Congratulations!',
       message:
-        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
+        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
       confirmedTitle: 'RESERVATION CONFIRMED',
       confirmedItems: [
         'Payment of 1.- processed successfully',
@@ -92,7 +92,7 @@ const Result = () => {
     de: {
       title: 'Herzlichen Glückwunsch!',
       message:
-        'Ihre Reservierung für die <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> wurde erfolgreich bestätigt! Willkommen im Abenteuer der intelligenten Mobilität.',
+        'Ihre Reservierung für die <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> wurde erfolgreich bestätigt! Willkommen im Abenteuer der intelligenten Mobilität.',
       confirmedTitle: 'RESERVIERUNG BESTÄTIGT',
       confirmedItems: [
         'Zahlung von 1.- erfolgreich verarbeitet',
@@ -115,7 +115,7 @@ const Result = () => {
     es: {
       title: '¡Felicitaciones!',
       message:
-        'Su reserva para la <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> ha sido confirmada con éxito! Bienvenido a la aventura de la movilidad inteligente.',
+        'Su reserva para la <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> ha sido confirmada con éxito! Bienvenido a la aventura de la movilidad inteligente.',
       confirmedTitle: 'RESERVA CONFIRMADA',
       confirmedItems: [
         'Pago de 1.- procesado con éxito',
@@ -138,7 +138,7 @@ const Result = () => {
     nl: {
       title: 'Gefeliciteerd!',
       message:
-        'Uw reservering voor de <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> is succesvol bevestigd! Welkom bij het slimme mobiliteitsavontuur.',
+        'Uw reservering voor de <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> is succesvol bevestigd! Welkom bij het slimme mobiliteitsavontuur.',
       confirmedTitle: 'RESERVERING BEVESTIGD',
       confirmedItems: [
         'Betaling van 1.- succesvol verwerkt',
@@ -161,7 +161,7 @@ const Result = () => {
     pt: {
       title: 'Parabéns!',
       message:
-        'Sua reserva para o <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> foi confirmada com sucesso! Bem-vindo à aventura da mobilidade inteligente.',
+        'Sua reserva para o <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> foi confirmada com sucesso! Bem-vindo à aventura da mobilidade inteligente.',
       confirmedTitle: 'RESERVA CONFIRMADA',
       confirmedItems: [
         'Pagamento de 1.- processado com sucesso',
@@ -184,7 +184,7 @@ const Result = () => {
     hi: {
       title: 'बधाई हो!',
       message:
-        '<span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> के लिए आपका आरक्षण सफलतापूर्वक पुष्ट हो गया है! स्मार्ट मोबिलिटी एडवेंचर में आपका स्वागत है।',
+        '<span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> के लिए आपका आरक्षण सफलतापूर्वक पुष्ट हो गया है! स्मार्ट मोबिलिटी एडवेंचर में आपका स्वागत है।',
       confirmedTitle: 'आरक्षण पुष्ट',
       confirmedItems: [
         '1.- का भुगतान सफलतापूर्वक संसाधित',
@@ -207,7 +207,7 @@ const Result = () => {
     ar: {
       title: 'تهانينا!',
       message:
-        'تم تأكيد حجزك لـ <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> بنجاح! مرحباً بك في مغامرة التنقل الذكي.',
+        'تم تأكيد حجزك لـ <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> بنجاح! مرحباً بك في مغامرة التنقل الذكي.',
       confirmedTitle: 'تم تأكيد الحجز',
       confirmedItems: [
         'تمت معالجة الدفع 1.- بنجاح',
@@ -230,7 +230,7 @@ const Result = () => {
     ru: {
       title: 'Поздравляем!',
       message:
-        'Ваше бронирование <span style="color:#E30613; font-weight:bold;">Smart Bike Jacket IGLOW</span> успешно подтверждено! Добро пожаловать в приключение умной мобильности.',
+        'Ваше бронирование <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> успешно подтверждено! Добро пожаловать в приключение умной мобильности.',
       confirmedTitle: 'БРОНИРОВАНИЕ ПОДТВЕРЖДЕНО',
       confirmedItems: [
         'Платеж 1.- успешно обработан',
@@ -309,7 +309,7 @@ const Result = () => {
 
           <div className='swiss-badge'>
             <div className='swiss-flag'></div>
-            <span>SWISS MADE SMART JACKET</span>
+            <span>SWISS MADE SMART VEST</span>
           </div>
 
           <div className='result-actions'>
@@ -328,7 +328,7 @@ const Result = () => {
           <p
             style={{ fontSize: '32px', fontWeight: 700, marginBottom: '30px' }}
           >
-            iGlow® - Swiss Made Smart Jacket
+            iGlow® - Swiss Made Smart Vest
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
             © 2025 iGlow Switzerland. Tous droits réservés.

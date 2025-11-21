@@ -559,7 +559,7 @@ function CountdownSection() {
           </video>
         </Box>
 
-        <Typography variant='body1' sx={{ mb: 4 }}>
+        {/* <Typography variant='body1' sx={{ mb: 4 }}>
           <Typography
             component='span'
             fontWeight='bold'
@@ -586,7 +586,7 @@ function CountdownSection() {
           >
             KICKSTARTER
           </Typography>
-        </Typography>
+        </Typography> */}
 
         <Countdown />
 

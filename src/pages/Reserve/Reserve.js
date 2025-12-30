@@ -35,7 +35,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: 'LE 18 NOVEMBRE 2025',
+      launchDate: 'LE 26 MARS 2026',
       launchText: 'Ouverture des ventes',
       socialProof: 'cyclistes ont déjà réservé leur gilet IGLOW',
       benefits: [
@@ -82,7 +82,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: 'NOVEMBER 18, 2025',
+      launchDate: 'MARCH 26, 2026',
       launchText: 'Sales Opening',
       socialProof: 'cyclists have already reserved their IGLOW vest',
       benefits: [
@@ -128,7 +128,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18. NOVEMBER 2025',
+      launchDate: '26. MÄRZ 2026',
       launchText: 'Verkaufsstart',
       socialProof: 'Radfahrer haben bereits ihre IGLOW-Jacke reserviert',
       benefits: [
@@ -175,7 +175,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 DE NOVIEMBRE DE 2025',
+      launchDate: '26 DE MARZO DE 2026',
       launchText: 'Apertura de ventas',
       socialProof: 'ciclistas ya han reservado su chaqueta IGLOW',
       benefits: [
@@ -221,7 +221,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 NOVEMBER 2025',
+      launchDate: '26 MAART 2026',
       launchText: 'Verkoop opening',
       socialProof: 'fietsers hebben al hun IGLOW-jas gereserveerd',
       benefits: [
@@ -269,7 +269,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 DE NOVEMBRO DE 2025',
+      launchDate: '26 DE MARÇO DE 2026',
       launchText: 'Abertura de vendas',
       socialProof: 'ciclistas já reservaram sua jaqueta IGLOW',
       benefits: [
@@ -316,7 +316,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 नवंबर 2025',
+      launchDate: '26 मार्च 2026',
       launchText: 'बिक्री शुरुआत',
       socialProof: 'साइकिल चालकों ने पहले ही अपनी IGLOW जैकेट आरक्षित कर ली है',
       benefits: [
@@ -363,7 +363,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 نوفمبر 2025',
+      launchDate: '26 مارس 2026',
       launchText: 'افتتاح المبيعات',
       socialProof: 'راكبي الدراجات قد حجزوا بالفعل سترة IGLOW الخاصة بهم',
       benefits: [
@@ -409,7 +409,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '18 НОЯБРЯ 2025',
+      launchDate: '26 МАРТА 2026',
       launchText: 'Начало продаж',
       socialProof: 'велосипедистов уже забронировали свою куртку IGLOW',
       benefits: [
@@ -620,6 +620,10 @@ const Reserve = () => {
       <section className='countdown'>
         <div className='container'>
           <h2>
+            {currentContent.launchText}
+            <br />
+            <span className='date-frame'>{currentContent.launchDate}</span>
+            <br />
             <a
               href='https://iglow.swiss'
               target='_blank'

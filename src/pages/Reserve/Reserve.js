@@ -620,10 +620,6 @@ const Reserve = () => {
       <section className='countdown'>
         <div className='container'>
           <h2>
-            {currentContent.launchText}
-            <br />
-            <span className='date-frame'>{currentContent.launchDate}</span>
-            <br />
             <a
               href='https://iglow.swiss'
               target='_blank'
@@ -650,23 +646,6 @@ const Reserve = () => {
       {/* Reserve Section */}
       <section className='reserve-section'>
         <div className='container'>
-          <div className='social-proof'>
-            <p>
-              <strong
-                id='reservation-counter'
-                style={{
-                  display: 'block',
-                  fontSize: '60px',
-                  lineHeight: '1',
-                  marginBottom: '10px',
-                }}
-              >
-                {reservationCounter}
-              </strong>
-              {currentContent.socialProof}
-            </p>
-          </div>
-
           <div className='benefits'>
             {currentContent.benefits.map((benefit, index) => (
               <div key={index} className='benefit'>

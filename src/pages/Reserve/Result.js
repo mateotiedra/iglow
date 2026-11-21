@@ -12,7 +12,9 @@ const Result = () => {
 
     if (
       urlLang &&
-      ['fr', 'en', 'de', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(urlLang)
+      ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
+        urlLang
+      )
     ) {
       setCurrentLang(urlLang);
     } else {
@@ -20,7 +22,7 @@ const Result = () => {
       const langCode = browserLang.split('-')[0];
 
       if (
-        ['fr', 'en', 'de', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
+        ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
           langCode
         )
       ) {
@@ -48,12 +50,10 @@ const Result = () => {
       message:
         'Votre réservation pour le <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> a été confirmée avec succès ! Bienvenue dans l\'aventure de la mobilité intelligente.',
       confirmedTitle: 'RÉSERVATION CONFIRMÉE',
+      confirmationMessage:
+        'Merci ! Votre achat a bien été enregistré et votre pré-commande est validée avec succès. Un email de confirmation vous a été envoyé.',
       confirmedItems: [
-        'Paiement de 1.- traité avec succès',
-        'Email de confirmation envoyé',
-        'Accès prioritaire sécurisé pour le 18 novembre 2025',
-        'Super Early Bird à <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (au lieu de <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Économie garantie de <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'BRAVO ! Vous venez d\'économiser<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
       ],
       nextStepsTitle: '👀 Prochaines Étapes',
       nextStepsItems: [
@@ -61,45 +61,21 @@ const Result = () => {
         'Accès exclusif au lancement Kickstarter',
         'Livraison prioritaire',
         'Support client dédié',
+        'Parrainez vos amis et proches pour venir découvrir le crowdfunding iGlow.swiss',
       ],
       backHome: "Retour à l'Accueil",
       contactUs: 'Nous Contacter',
       showIcon: false,
-    },
-    en: {
-      title: 'Congratulations!',
-      message:
-        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
-      confirmedTitle: 'RESERVATION CONFIRMED',
-      confirmedItems: [
-        'Payment of 1.- processed successfully',
-        'Confirmation email sent',
-        'Priority access secured for November 18, 2025',
-        'Super Early Bird at <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (instead of <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Guaranteed savings of <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
-      ],
-      nextStepsTitle: '👀 Next Steps',
-      nextStepsItems: [
-        'Monitor your inbox for updates',
-        'Exclusive access to Kickstarter launch',
-        'Priority delivery',
-        'Dedicated customer support',
-      ],
-      backHome: 'Back to Home',
-      contactUs: 'Contact Us',
-      showIcon: true,
     },
     de: {
       title: 'Herzlichen Glückwunsch!',
       message:
         'Ihre Reservierung für die <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> wurde erfolgreich bestätigt! Willkommen im Abenteuer der intelligenten Mobilität.',
       confirmedTitle: 'RESERVIERUNG BESTÄTIGT',
+      confirmationMessage:
+        'Vielen Dank! Ihr Kauf wurde erfolgreich erfasst und Ihre Vorbestellung ist bestätigt. Eine Bestätigungs-E-Mail wurde an Sie gesendet.',
       confirmedItems: [
-        'Zahlung von 1.- erfolgreich verarbeitet',
-        'Bestätigungs-E-Mail gesendet',
-        'Prioritätszugang für den 18. November 2025 gesichert',
-        'Super Early Bird für <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (statt <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Garantierte Ersparnis von <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'BRAVO! Sie haben gerade<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span> gespart</span>',
       ],
       nextStepsTitle: '👀 Nächste Schritte',
       nextStepsItems: [
@@ -107,9 +83,54 @@ const Result = () => {
         'Exklusiver Zugang zum Kickstarter-Launch',
         'Prioritätslieferung',
         'Dedizierter Kundensupport',
+        'Empfehlen Sie Ihren Freunden und Ihrer Familie das iGlow.swiss-Crowdfunding',
       ],
       backHome: 'Zurück zur Startseite',
       contactUs: 'Kontaktieren Sie uns',
+      showIcon: true,
+    },
+    it: {
+      title: 'Congratulazioni!',
+      message:
+        'La tua prenotazione per il <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> è stata confermata con successo! Benvenuto nell\'avventura della mobilità intelligente.',
+      confirmedTitle: 'PRENOTAZIONE CONFERMATA',
+      confirmationMessage:
+        'Grazie! Il tuo acquisto è stato registrato correttamente e il tuo preordine è confermato. Ti è stata inviata un\'email di conferma.',
+      confirmedItems: [
+        'BRAVO! Hai appena risparmiato<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 Prossimi Passi',
+      nextStepsItems: [
+        'Controlla la tua casella email per gli aggiornamenti',
+        'Accesso esclusivo al lancio su Kickstarter',
+        'Consegna prioritaria',
+        'Assistenza clienti dedicata',
+        'Invita amici e parenti a scoprire il crowdfunding di iGlow.swiss',
+      ],
+      backHome: 'Torna alla Home',
+      contactUs: 'Contattaci',
+      showIcon: true,
+    },
+    en: {
+      title: 'Congratulations!',
+      message:
+        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
+      confirmedTitle: 'RESERVATION CONFIRMED',
+      confirmationMessage:
+        'Thank you! Your purchase has been successfully recorded and your pre-order is confirmed. A confirmation email has been sent to you.',
+      confirmedItems: [
+        'BRAVO! You just saved<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 Next Steps',
+      nextStepsItems: [
+        'Monitor your inbox for updates',
+        'Exclusive access to Kickstarter launch',
+        'Priority delivery',
+        'Dedicated customer support',
+        'Refer your friends and family to discover the iGlow.swiss crowdfunding',
+      ],
+      backHome: 'Back to Home',
+      contactUs: 'Contact Us',
       showIcon: true,
     },
     es: {
@@ -117,12 +138,10 @@ const Result = () => {
       message:
         'Su reserva para la <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> ha sido confirmada con éxito! Bienvenido a la aventura de la movilidad inteligente.',
       confirmedTitle: 'RESERVA CONFIRMADA',
+      confirmationMessage:
+        '¡Gracias! Su compra ha sido registrada con éxito y su pre-pedido está confirmado. Se le ha enviado un correo electrónico de confirmación.',
       confirmedItems: [
-        'Pago de 1.- procesado con éxito',
-        'Email de confirmación enviado',
-        'Acceso prioritario asegurado para el 18 de noviembre de 2025',
-        'Super Early Bird a <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (en lugar de <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Ahorro garantizado de <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        '¡BRAVO! Acabas de ahorrar<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
       ],
       nextStepsTitle: '👀 Próximos Pasos',
       nextStepsItems: [
@@ -130,6 +149,7 @@ const Result = () => {
         'Acceso exclusivo al lanzamiento de Kickstarter',
         'Entrega prioritaria',
         'Soporte al cliente dedicado',
+        'Recomiende a sus amigos y familiares el crowdfunding de iGlow.swiss',
       ],
       backHome: 'Volver al Inicio',
       contactUs: 'Contáctanos',
@@ -140,12 +160,10 @@ const Result = () => {
       message:
         'Uw reservering voor de <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> is succesvol bevestigd! Welkom bij het slimme mobiliteitsavontuur.',
       confirmedTitle: 'RESERVERING BEVESTIGD',
+      confirmationMessage:
+        'Bedankt! Uw aankoop is succesvol geregistreerd en uw voorbestelling is bevestigd. Er is een bevestigingsemail naar u verzonden.',
       confirmedItems: [
-        'Betaling van 1.- succesvol verwerkt',
-        'Bevestigingsemail verzonden',
-        'Prioriteitstoegang beveiligd voor 18 november 2025',
-        'Super Early Bird voor <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (in plaats van <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Gegarandeerde besparing van <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'BRAVO! U heeft zojuist<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span> bespaard</span>',
       ],
       nextStepsTitle: '👀 Volgende Stappen',
       nextStepsItems: [
@@ -153,6 +171,7 @@ const Result = () => {
         'Exclusieve toegang tot Kickstarter-lancering',
         'Prioriteitslevering',
         'Toegewijde klantenondersteuning',
+        'Beveel uw vrienden en familie de iGlow.swiss-crowdfunding aan',
       ],
       backHome: 'Terug naar Home',
       contactUs: 'Contacteer Ons',
@@ -163,12 +182,10 @@ const Result = () => {
       message:
         'Sua reserva para o <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> foi confirmada com sucesso! Bem-vindo à aventura da mobilidade inteligente.',
       confirmedTitle: 'RESERVA CONFIRMADA',
+      confirmationMessage:
+        'Obrigado! Sua compra foi registrada com sucesso e sua pré-encomenda está confirmada. Um e-mail de confirmação foi enviado para você.',
       confirmedItems: [
-        'Pagamento de 1.- processado com sucesso',
-        'E-mail de confirmação enviado',
-        'Acesso prioritário garantido para 18 de novembro de 2025',
-        'Super Early Bird por <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (em vez de <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Economia garantida de <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'BRAVO! Você acabou de economizar<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
       ],
       nextStepsTitle: '👀 Próximos Passos',
       nextStepsItems: [
@@ -176,6 +193,7 @@ const Result = () => {
         'Acesso exclusivo ao lançamento do Kickstarter',
         'Entrega prioritária',
         'Suporte ao cliente dedicado',
+        'Indique seus amigos e familiares para descobrir o crowdfunding da iGlow.swiss',
       ],
       backHome: 'Voltar ao Início',
       contactUs: 'Entre em Contato',
@@ -186,12 +204,10 @@ const Result = () => {
       message:
         '<span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> के लिए आपका आरक्षण सफलतापूर्वक पुष्ट हो गया है! स्मार्ट मोबिलिटी एडवेंचर में आपका स्वागत है।',
       confirmedTitle: 'आरक्षण पुष्ट',
+      confirmationMessage:
+        'धन्यवाद! आपकी खरीदारी सफलतापूर्वक दर्ज कर ली गई है और आपका प्री-ऑर्डर पुष्ट हो गया है। आपको एक पुष्टिकरण ईमेल भेजा गया है।',
       confirmedItems: [
-        '1.- का भुगतान सफलतापूर्वक संसाधित',
-        'पुष्टिकरण ईमेल भेजा गया',
-        '18 नवंबर 2025 के लिए प्राथमिकता पहुंच सुरक्षित',
-        'सुपर अर्ली बर्ड <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> में (<span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span> के बजाय)',
-        '<span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span> की गारंटीशुदा बचत',
+        'शाबाश! आपने अभी-अभी<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span> बचाए हैं</span>',
       ],
       nextStepsTitle: '👀 अगले कदम',
       nextStepsItems: [
@@ -199,6 +215,7 @@ const Result = () => {
         'किकस्टार्टर लॉन्च तक विशेष पहुंच',
         'प्राथमिकता डिलीवरी',
         'समर्पित ग्राहक सहायता',
+        'अपने दोस्तों और परिवार को iGlow.swiss क्राउडफंडिंग के बारे में बताएं',
       ],
       backHome: 'होम पर वापस जाएं',
       contactUs: 'हमसे संपर्क करें',
@@ -209,12 +226,10 @@ const Result = () => {
       message:
         'تم تأكيد حجزك لـ <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> بنجاح! مرحباً بك في مغامرة التنقل الذكي.',
       confirmedTitle: 'تم تأكيد الحجز',
+      confirmationMessage:
+        'شكراً لك! تم تسجيل عملية الشراء الخاصة بك بنجاح وتم تأكيد الطلب المسبق. تم إرسال بريد إلكتروني للتأكيد إليك.',
       confirmedItems: [
-        'تمت معالجة الدفع 1.- بنجاح',
-        'تم إرسال بريد إلكتروني للتأكيد',
-        'تم تأمين الوصول المفضل لـ 18 نوفمبر 2025',
-        'سوبر إيرلي بيرد بـ <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (بدلاً من <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'توفير مضمون قدره <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'برافو! لقد وفرت للتو<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
       ],
       nextStepsTitle: '👀 الخطوات التالية',
       nextStepsItems: [
@@ -222,6 +237,7 @@ const Result = () => {
         'وصول حصري لإطلاق كيك ستارتر',
         'تسليم مفضل',
         'دعم عملاء مخصص',
+        'أخبر أصدقاءك وعائلتك عن حملة التمويل الجماعي iGlow.swiss',
       ],
       backHome: 'العودة للرئيسية',
       contactUs: 'اتصل بنا',
@@ -232,12 +248,10 @@ const Result = () => {
       message:
         'Ваше бронирование <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> успешно подтверждено! Добро пожаловать в приключение умной мобильности.',
       confirmedTitle: 'БРОНИРОВАНИЕ ПОДТВЕРЖДЕНО',
+      confirmationMessage:
+        'Спасибо! Ваша покупка успешно зарегистрирована, и ваш предзаказ подтвержден. Вам отправлено электронное письмо с подтверждением.',
       confirmedItems: [
-        'Платеж 1.- успешно обработан',
-        'Электронное письмо с подтверждением отправлено',
-        'Приоритетный доступ обеспечен на 18 ноября 2025',
-        'Супер ранняя птица за <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">155.-</span> (вместо <span style="color:#fff; position:relative; display:inline-block;">CHF<span style="position:absolute; top:0; left:15px; width:55px; height:100%; background:linear-gradient(to bottom right, transparent 46%, #E30613 48%, #E30613 52%, transparent 54%); pointer-events:none;"></span> 259.-</span>)',
-        'Гарантированная экономия <span style="color:#fff; font-weight:bold; font-size:1.2em;">CHF</span> <span style="color:#E30613; font-weight:bold; font-size:1.2em;">104.-</span>',
+        'БРАВО! Вы только что сэкономили<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
       ],
       nextStepsTitle: '👀 Следующие Шаги',
       nextStepsItems: [
@@ -245,6 +259,7 @@ const Result = () => {
         'Эксклюзивный доступ к запуску Kickstarter',
         'Приоритетная доставка',
         'Выделенная поддержка клиентов',
+        'Расскажите друзьям и близким о краудфандинге iGlow.swiss',
       ],
       backHome: 'Вернуться на Главную',
       contactUs: 'Связаться с Нами',
@@ -273,13 +288,6 @@ const Result = () => {
         >
           {currentContent.showIcon && <div className='result-icon'>🤝</div>}
 
-          <h1 className='result-title success-title'>{currentContent.title}</h1>
-
-          <p
-            className='result-message'
-            dangerouslySetInnerHTML={{ __html: currentContent.message }}
-          />
-
           <div className='result-details'>
             <h3 style={{ textAlign: 'center' }}>
               <span style={{ color: '#28a745', fontWeight: 900 }}>
@@ -287,11 +295,21 @@ const Result = () => {
               </span>{' '}
               <span style={{ color: '#28a745', fontSize: '1.2em' }}>✓</span>
             </h3>
-            <ul>
+            <p
+              style={{
+                textAlign: 'center',
+                fontSize: '1.15em',
+                lineHeight: 1.6,
+                marginBottom: '25px',
+              }}
+            >
+              {currentContent.confirmationMessage}
+            </p>
+            <div style={{ textAlign: 'center', fontSize: '20px', lineHeight: 2 }}>
               {currentContent.confirmedItems.map((item, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                <div key={index} dangerouslySetInnerHTML={{ __html: item }} />
               ))}
-            </ul>
+            </div>
           </div>
 
           <div className='result-details info-details'>
@@ -313,10 +331,10 @@ const Result = () => {
           </div>
 
           <div className='result-actions'>
-            <Link to='/' className='btn btn-primary'>
+            <Link to='/' className='result-btn result-btn-primary'>
               {currentContent.backHome}
             </Link>
-            <a href='mailto:contact@iglow.swiss' className='btn btn-secondary'>
+            <a href='mailto:contact@iglow.swiss' className='result-btn result-btn-secondary'>
               {currentContent.contactUs}
             </a>
           </div>
@@ -331,7 +349,7 @@ const Result = () => {
             iGlow® - Swiss Made Smart Vest
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
-            © 2025 iGlow Switzerland. Tous droits réservés.
+            © 2026 iGlow Switzerland. Tous droits réservés.
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
             Contact :{' '}

@@ -6,7 +6,9 @@ const CountdownLogic = () => {
   const now = new Date().getTime();
   const campaignRunning = now >= LAUNCH_DATE.getTime();
   const countDownDate = campaignRunning ? END_CAMPAIGN_DATE : LAUNCH_DATE;
-  const [countdown, setCountdown] = useState(countDownDate - now);
+  const [countdown, setCountdown] = useState(
+    Math.max(countDownDate - now, 0)
+  );
 
   const timeLeftFormatted = {
     days: Math.floor(countdown / (1000 * 60 * 60 * 24)),
@@ -23,7 +25,7 @@ const CountdownLogic = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountdown((countdown) => countdown - 1000);
+      setCountdown((countdown) => Math.max(countdown - 1000, 0));
     }, 1000);
 
     return () => {

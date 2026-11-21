@@ -135,7 +135,7 @@
   gap: 20px;
 }
 
-.btn {
+.result-btn {
   display: inline-block;
   padding: 20px 40px;
   font-size: 24px;
@@ -150,25 +150,25 @@
   min-width: 230px;
 }
 
-.btn-primary {
+.result-btn-primary {
   background: #e30613;
   color: #fff;
   border-color: #e30613;
 }
 
-.btn-primary:hover {
+.result-btn-primary:hover {
   background: #a00409;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(227, 6, 19, 0.4);
 }
 
-.btn-secondary {
+.result-btn-secondary {
   background: transparent;
   color: #fff;
   border-color: #fff;
 }
 
-.btn-secondary:hover {
+.result-btn-secondary:hover {
   background: #fff;
   color: #000;
   transform: translateY(-2px);
@@ -358,7 +358,7 @@
     font-size: 24px;
   }
 
-  .btn {
+  .result-btn {
     padding: 15px 30px;
     font-size: 18px;
     min-width: 200px;
